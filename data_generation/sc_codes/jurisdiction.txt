@@ -1,0 +1,14 @@
+1 	cert
+2 	appeal
+3 	bail
+4 	certification
+5 	docketing fee
+6 	rehearing or restored to calendar for reargument
+7 	injunction
+8 	mandamus
+9 	original
+10 	prohibition
+12 	stay
+13 	writ of error
+14 	writ of habeas corpus
+15 	unspecified, other

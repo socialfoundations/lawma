@@ -1,0 +1,4 @@
+1 	no declaration of unconstitutionality
+2 	act of congress declared unconstitutional
+3 	state or territorial law, reg, or const provision unconstitutional
+4 	municipal or other local ordinance unconstitutional

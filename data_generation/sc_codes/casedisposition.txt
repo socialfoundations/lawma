@@ -1,0 +1,11 @@
+1 	stay, petition, or motion granted
+2 	affirmed (includes modified)
+3 	reversed
+4 	reversed and remanded
+5 	vacated and remanded
+6 	affirmed and reversed (or vacated) in part
+7 	affirmed and reversed (or vacated) in part and remanded
+8 	vacated
+9 	petition denied or appeal dismissed
+10 	certification to or from a lower court
+11 	no disposition

@@ -1,0 +1,7 @@
+1 	opinion of the court (orally argued)
+2 	per curiam (no oral argument)
+4 	decrees
+5 	equally divided vote
+6 	per curiam (orally argued)
+7 	judgment of the Court (orally argued)
+8 	seriatim

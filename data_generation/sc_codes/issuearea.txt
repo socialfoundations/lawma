@@ -1,0 +1,14 @@
+1 	Criminal Procedure
+2 	Civil Rights
+3 	First Amendment
+4 	Due Process
+5 	Privacy
+6 	Attorneys
+7 	Unions
+8 	Economic Activity
+9 	Judicial Power
+10 	Federalism
+11 	Interstate Relations
+12 	Federal Taxation
+13 	Miscellaneous
+14 	Private Action

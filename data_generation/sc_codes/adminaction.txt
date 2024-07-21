@@ -1,0 +1,125 @@
+1 	Army and Air Force Exchange Service
+2 	Atomic Energy Commission
+3 	Secretary or administrative unit or personnel of the U.S. Air Force
+4 	Department or Secretary of Agriculture
+5 	Alien Property Custodian
+6 	Secretary or administrative unit or personnel of the U.S. Army
+7 	Board of Immigration Appeals
+8 	Bureau of Indian Affairs
+9 	Bureau of Prisons
+10 	Bonneville Power Administration
+11 	Benefits Review Board
+12 	Civil Aeronautics Board
+13 	Bureau of the Census
+14 	Central Intelligence Agency
+15 	Commodity Futures Trading Commission
+16 	Department or Secretary of Commerce
+17 	Comptroller of Currency
+18 	Consumer Product Safety Commission
+19 	Civil Rights Commission
+20 	Civil Service Commission, U.S.
+21 	Customs Service or Commissioner or Collector of Customs
+22 	Defense Base Closure and REalignment Commission
+23 	Drug Enforcement Agency
+24 	Department or Secretary of Defense (and Department or Secretary of War)
+25 	Department or Secretary of Energy
+26 	Department or Secretary of the Interior
+27 	Department of Justice or Attorney General
+28 	Department or Secretary of State
+29 	Department or Secretary of Transportation
+30 	Department or Secretary of Education
+31 	U.S. Employees' Compensation Commission, or Commissioner
+32 	Equal Employment Opportunity Commission
+33 	Environmental Protection Agency or Administrator
+34 	Federal Aviation Agency or Administration
+35 	Federal Bureau of Investigation or Director
+36 	Federal Bureau of Prisons
+37 	Farm Credit Administration
+38 	Federal Communications Commission (including a predecessor, Federal Radio Commission)
+39 	Federal Credit Union Administration
+40 	Food and Drug Administration
+41 	Federal Deposit Insurance Corporation
+42 	Federal Energy Administration
+43 	Federal Election Commission
+44 	Federal Energy Regulatory Commission
+45 	Federal Housing Administration
+46 	Federal Home Loan Bank Board
+47 	Federal Labor Relations Authority
+48 	Federal Maritime Board
+49 	Federal Maritime Commission
+50 	Farmers Home Administration
+51 	Federal Parole Board
+52 	Federal Power Commission
+53 	Federal Railroad Administration
+54 	Federal Reserve Board of Governors
+55 	Federal Reserve System
+56 	Federal Savings and Loan Insurance Corporation
+57 	Federal Trade Commission
+58 	Federal Works Administration, or Administrator
+59 	General Accounting Office
+60 	Comptroller General
+61 	General Services Administration
+62 	Department or Secretary of Health, Education and Welfare
+63 	Department or Secretary of Health and Human Services
+64 	Department or Secretary of Housing and Urban Development
+65 	Administrative agency established under an interstate compact (except for the MTC)
+66 	Interstate Commerce Commission
+67 	Indian Claims Commission
+68 	Immigration and Naturalization Service, or Director of, or District Director of, or Immigration and Naturalization Enforcement
+69 	Internal Revenue Service, Collector, Commissioner, or District Director of
+70 	Information Security Oversight Office
+71 	Department or Secretary of Labor
+72 	Loyalty Review Board
+73 	Legal Services Corporation
+74 	Merit Systems Protection Board
+75 	Multistate Tax Commission
+76 	National Aeronautics and Space Administration
+77 	Secretary or administrative unit or personnel of the U.S. Navy
+78 	National Credit Union Administration
+79 	National Endowment for the Arts
+80 	National Enforcement Commission
+81 	National Highway Traffic Safety Administration
+82 	National Labor Relations Board, or regional office or officer
+83 	National Mediation Board
+84 	National Railroad Adjustment Board
+85 	Nuclear Regulatory Commission
+86 	National Security Agency
+87 	Office of Economic Opportunity
+88 	Office of Management and Budget
+89 	Office of Price Administration, or Price Administrator
+90 	Office of Personnel Management
+91 	Occupational Safety and Health Administration
+92 	Occupational Safety and Health Review Commission
+93 	Office of Workers' Compensation Programs
+94 	Patent Office, or Commissioner of, or Board of Appeals of
+95 	Pay Board (established under the Economic Stabilization Act of 1970)
+96 	Pension Benefit Guaranty Corporation
+97 	U.S. Public Health Service
+98 	Postal Rate Commission
+99 	Provider Reimbursement Review Board
+100 	Renegotiation Board
+101 	Railroad Adjustment Board
+102 	Railroad Retirement Board
+103 	Subversive Activities Control Board
+104 	Small Business Administration
+105 	Securities and Exchange Commission
+106 	Social Security Administration or Commissioner
+107 	Selective Service System
+108 	Department or Secretary of the Treasury
+109 	Tennessee Valley Authority
+110 	United States Forest Service
+111 	United States Parole Commission
+112 	Postal Service and Post Office, or Postmaster General, or Postmaster
+113 	United States Sentencing Commission
+114 	Veterans' Administration or Board of Veterans' Appeals
+115 	War Production Board
+116 	Wage Stabilization Board
+117 	State Agency
+118 	Unidentifiable
+119 	Office of Thrift Supervision
+120 	Department of Homeland Security
+121 	Board of General Appraisers
+122 	Board of Tax Appeals
+123 	General Land Office or Commissioners
+124 	NO Admin Action
+125 	Processing Tax Board of Review

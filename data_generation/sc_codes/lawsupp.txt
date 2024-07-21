@@ -1,0 +1,206 @@
+ 100 	Article I, Section 1 (delegation of powers)
+101 	Article I, Section 10 (state bill of attainder, ex post facto law, or bills of credit)
+102 	Article I, Section 2, Paragraph 1 (composition of the House of Representatives)
+103 	Article I, Section 2, Paragraph 3 (apportionment of Representatives)
+104 	Article I, Section 4, Paragraph 1 (elections clause)
+105 	Article I, Section 5, Paragraph 1 (congressional qualifications)
+106 	Article I, Section 6, Paragraph 1 (speech or debate clause)
+107 	Article I, Section 6, Paragraph 2 (civil appointments)
+108 	Article I, Section 7, Paragraph 1 (origination clause)
+109 	Article I, Section 7, Paragraph 2 (separation of powers)
+110 	Article I, Section 8, Paragraph 1 (taxing, spending, general welfare, or uniformity clause)
+111 	Article I, Section 8, Paragraph 3 (interstate commerce clause)
+112 	Article I, Section 8, Paragraph 4 (bankruptcy clause)
+113 	Article I, Section 8, Paragraph 7 (postal power)
+114 	Article I, Section 8, Paragraph 8 (patent and copyright clause)
+115 	Article I, Section 8, Paragraph 11 (war power)
+116 	Article I, Section 8, Paragraph 14 (governance of the armed forces)
+117 	Article I, Section 8, Paragraph 15 (call-up of militia)
+118 	Article I, Section 8, Paragraph 16 (organizing the militia)
+119 	Article I, Section 8, Paragraph 17 (governance of the District of Columbia and lands purchased from the states)
+120 	Article I, Section 8, Paragraph 18 (necessary and proper clause)
+121 	Article I, Section 9, Paragraph 2 (suspension of the writ of habeas corpus)
+122 	Article I, Section 9, Paragraph 3 (bill of attainder or ex post facto law)
+123 	Article I, Section 9, Paragraph 4 (direct tax)
+124 	Article I, Section 9, Paragraph 5 (export clause)
+125 	Article I, Section 9, Paragraph 6 (preference to ports)
+126 	Article I, Section 9, Paragraph 7 (appropriations clause)
+127 	Article I, Section 10 (state bill of attainder or ex post facto law)
+128 	Article I, Section 10, Paragraph 1 (contract clause)
+129 	Article I, Section 10, Paragraph 2 (export-import clause)
+130 	Article I, Section 10, Paragraph 3 (compact clause)
+131 	Article II, Section 1 (executive power)
+132 	Article II, Section 1, Paragraph 8 (oath provision)
+133 	Article II, Section 2 (commander-in-chief)
+134 	Article II, Section 2, Paragraph 1 (presidential pardoning power)
+135 	Article II, Section 2, Paragraph 2 (appointments clause)
+136 	Article III, Section 1, Paragraph 1 (judicial power)
+137 	Article III, Section 1, Paragraph 2 (good behavior and compensation clause of federal judges)
+138 	Article III, Section 2 (extent of judicial power)
+139 	Article III, Section 2, Paragraph 1 (case or controversy requirement)
+140 	Article III, Section 2, Paragraph 2 (original jurisdiction)
+141 	Article III, Section 2, Paragraph 3 (vicinage requirement)
+142 	Article III, Section 3 (treason clause)
+143 	Article IV, Section 1 (full faith and credit clause)
+144 	Article IV, Section 2, Paragraph 1 (privileges and immunities clause)
+145 	Article IV, Section 2, Paragraph 2 (extradition clause)
+146 	Article IV, Section 3, Paragraph 2 (property clause)
+147 	Article IV, Section 4 (guarantee clause)
+148 	Article VI, Section 2 (supremacy clause)
+149 	Article VI, Section 3 (oath provision)
+150 	Amendment Clause
+151 	Article V, Section 1 (courts)
+152 	'contract clause' (No Article to be added)
+153 	'freedom of contract' (Again, no article)
+200 	First Amendment (speech, press, and assembly)
+201 	First Amendment (association)
+202 	First Amendment (free exercise of religion)
+203 	First Amendment (establishment of religion)
+204 	First Amendment (petition clause)
+205 	Fourth Amendment
+206 	Fifth Amendment (double jeopardy)
+207 	Fifth Amendment (due process)
+208 	Fifth Amendment (grand jury)
+209 	Fifth Amendment (Miranda warnings)
+210 	Fifth Amendment (self-incrimination)
+211 	Fifth Amendment (takings clause)
+212 	Fifth Amendment (equal protection)
+213 	Sixth Amendment (right to confront and cross-examine, compulsory process)
+214 	Sixth Amendment (right to counsel)
+215 	Sixth Amendment (right to trial by jury)
+216 	Sixth Amendment (speedy trial)
+217 	Sixth Amendment (other provisions)
+218 	Seventh Amendment
+219 	Eighth Amendment (prohibition of excessive bail)
+220 	Eighth Amendment (prohibition of excessive fines)
+221 	Eighth Amendment (cruel and unusual punishment)
+222 	Ninth Amendment
+223 	Tenth Amendment
+224 	Eleventh Amendment
+225 	Twelfth Amendment
+226 	Thirteenth Amendment (both sections 1 and 2)
+227 	Fourteenth Amendment (privileges and immunities clause)
+228 	Fourteenth Amendment (reduction in representation clause)
+229 	Fourteenth Amendment (citizenship clause)
+230 	Fourteenth Amendment (due process)
+231 	Fourteenth Amendment (equal protection)
+232 	Fourteenth Amendment (enforcement clause)
+233 	Fifteenth Amendment (other provisions)
+234 	Fifteenth Amendment (enforcement clause)
+235 	Sixteenth Amendment
+236 	Seventeenth Amendment
+237 	Twenty-First Amendment
+238 	Twenty-Fourth Amendment
+239 	Second Amendment
+240 	Fourteenth Amendment (due process and equal protection)
+241 	Fourteenth Amendment (takings clause)
+300 	Americans with Disabilities Act
+302 	Age Discrimination in Employment
+303 	Aid to Families with Dependent Children provisions of the Social Security Act, plus amendments
+304 	Clean Air, plus amendments
+305 	Administrative Procedure, or Administrative Orders Review
+306 	Atomic Energy
+307 	Bankruptcy Code, Bankruptcy Act or Rules, or Bankruptcy Reform Act of 1978
+308 	Medicaid provisions of the Social Security Act
+309 	Medicare provisions of the Social Security Act
+310 	Clayton
+311 	Reconstruction Civil Rights Acts (42 U.S.C. § 1978)
+312 	Reconstruction Civil Rights Acts (42 U.S.C. § 1981)
+313 	Reconstruction Civil Rights Acts (42 U.S.C. § 1982)
+314 	Reconstruction Civil Rights Acts (42 U.S.C. § 1983)
+315 	Reconstruction Civil Rights Acts (42 U.S.C. § 1985)
+316 	Reconstruction Civil Rights Acts (42 U.S.C. § 1986)
+317 	Civil Rights Act of 1964 (public accommodations)
+318 	Civil Rights Act of 1957
+319 	Civil Rights Act of 1991
+320 	Statutory provisions of the District of Columbia
+321 	Equal Access to Justice
+322 	Education Amendments of 1972
+323 	Employee Retirement Income Security, as amended
+324 	Elementary and Secondary Education
+325 	Federal False Claims
+326 	Communication Act of 1934, as amended
+327 	Federal Employees' Compensation
+328 	Civil Rights Attorney's Fees Awards
+329 	Federal Employers' Liability, as amended
+330 	Federal Election Campaign
+331 	Family Educational Rights and Privacy (Buckley Amendment)
+332 	Federal Food, Drug, and Cosmetic, and related statutes
+333 	Federal Insecticide, Fungicide, and Rodenticide
+334 	Fair Labor Standards
+335 	Freedom of Information, Sunshine, or Privacy Act
+336 	Federal Power
+337 	Federal Trade Commission
+338 	Federal Water Pollution Control (Clean Water), plus amendments
+339 	Omnibus Crime Control and Safe Streets, National Firearms, Organized Crime Control, Comprehensive Crime Control, or Gun Control Acts
+340 	Education of the Handicapped, Education for All Handicapped Children, or Individuals with Disabilities Education Acts, or related statutes, as amended
+341 	28 U.S.C. § 2241-2255 (habeas corpus)
+342 	Fair Housing
+343 	Interstate Commerce, as amended
+344 	Immigration and Naturalization, Immigration, Nationality, or Illegal Immigration Reform and Immigrant Responsibility Acts, as amended
+345 	Internal Revenue Code and pre-IRC revenue acts
+346 	Internal Security (also see 369)
+347 	Jencks
+348 	Jones, or Death on the High Seas
+349 	Longshoremen and Harbor Workers' Compensation
+350 	Labor-Management Relations
+351 	Labor-Management Reporting and Disclosure
+352 	Motor Carrier
+353 	Miller
+354 	National Environmental Policy
+355 	Natural Gas, or Natural Gas Policy Acts
+356 	National Labor Relations, as amended
+357 	Norris-LaGuardia
+358 	Occupational Safety and Health
+359 	Public Utility Regulatory Policy
+360 	Rehabilitation
+361 	Religious Freedom Restoration
+362 	Racketeer Influenced and Corrupt Organizations
+363 	Railway Labor
+364 	Robinson-Patman
+365 	Securities Act of 1933, the Securities and Exchange Act of 1934, or the Williams Act
+366 	Selective Service, Military Selective Service, or Universal Military Service and Training Acts
+367 	Sherman
+368 	Submerged Lands Acts
+369 	Smith, Subversive Activities Control, Communist Control, or other similar federal legislation (also see 346)
+370 	Social Security, as amended, including Social Security Disability Benefits Reform Act
+371 	Supplemental Security Income
+372 	State Law
+373 	Truth in Lending
+374 	Federal Tort Claims, or Alien Tort Statute
+375 	Tucker
+376 	Trading with the Enemy Act, as amended
+377 	Universal Code of Military Justice
+378 	Voting Rights Act of 1965, plus amendments
+379 	Reconstruction Civil Rights Acts (42 U.S.C. § 1971)
+380 	Reconstruction Civil Rights Acts (42 U.S.C. § 1999)
+381 	Civil Rights Act of 1964 (Title II)
+382 	Civil Rights Act of 1964 (Title IV)
+383 	Civil Rights Act of 1964 (other)
+384 	Civil Rights Act of 1964 (Title VII)
+385 	Civil Rights Act of 1964 (Title IX)
+387 	Civil Rights Act of 1964 (Title VI)
+388 	Federal Arbitration Act
+389 	Judiciary Act of 1789
+400 	Federal Rules of Civil Procedure, including Appellate Procedure, or relevant rules of a circuit court Judicial Code, and admiralty rules
+401 	Federal Rules of Criminal Procedure, or relevant rules of a circuit court
+402 	Federal Rules of Evidence
+403 	Supreme Court Rules
+500 	Abstention Doctrine
+501 	Retroactive application of a constitutional right
+502 	Exclusionary Rule (Fourth Amendment)
+503 	Exclusionary Rule (Right to Counsel)
+504 	Exclusionary Rule (Miranda warnings)
+505 	Harmless Error
+506 	Res Judicata
+507 	Estoppel
+508 	Writ Improvidently Granted
+509 	Treaty
+510 	Interstate Compact
+511 	Executive Order
+512 	Territory Statute
+513 	International Law
+514 	Emergency Price Control
+600 	Infrequently litigated statutes
+800 	State or Local Law Regulation
+900 	No Legal Provision 

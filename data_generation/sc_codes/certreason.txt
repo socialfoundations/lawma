@@ -1,0 +1,13 @@
+1 	case did not arise on cert or cert not granted
+2 	federal court conflict
+3 	federal court conflict and to resolve important or significant question
+4 	putative conflict
+5 	conflict between federal court and state court
+6 	state court conflict
+7 	federal court confusion or uncertainty
+8 	state court confusion or uncertainty
+9 	federal court and state court confusion or uncertainty
+10 	to resolve important or significant question
+11 	to resolve question presented
+12 	no reason given
+13 	other reason

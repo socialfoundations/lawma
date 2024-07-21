@@ -1,0 +1,7 @@
+1 	judicial review (national level)
+2 	judicial review (state level)
+3 	Supreme Court supervision of lower federal or state courts or original jurisdiction
+4 	statutory construction
+5 	interpretation of administrative regulation or rule, or executive order
+6 	diversity jurisdiction
+7 	federal common law

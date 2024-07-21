@@ -1,0 +1,57 @@
+00 not determined
+01 Alabama
+02 Alaska
+03 Arizona
+04 Arkansas
+05 California
+06 Colorado
+07 Connecticut
+08 Delaware
+09 Florida
+10 Georgia
+11 Hawaii
+12 Idaho
+13 Illinois
+14 Indiana
+15 Iowa
+16 Kansas
+17 Kentucky
+18 Louisiana
+19 Maine
+20 Maryland
+21 Massachussets
+22 Michigan
+23 Minnesota
+24 Mississippi
+25 Missouri
+26 Montana
+27 Nebraska
+28 Nevada
+29 New Hampshire
+30 New Jersey
+31 New Mexico
+32 New York
+33 North Carolina
+34 North Dakota
+35 Ohio
+36 Oklahoma
+37 Oregon
+38 Pennsylvania
+39 Rhode Island
+40 South Carolina
+41 South Dakota
+42 Tennessee
+43 Texas
+44 Utah
+45 Vermont
+46 Virginia
+47 Washington
+48 West Virginia
+49 Wisconsin
+50 Wyoming
+51 Virgin Island
+52 Puerto Rico
+53 District of Columbia
+54 Guam
+55 not applicable
+56 Panama Canal Zone

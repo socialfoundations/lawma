@@ -1,0 +1,212 @@
+1 	U.S. Court of Customs and Patent Appeals
+2 	U.S. Court of International Trade
+3 	U.S. Court of Claims, Court of Federal Claims
+4 	U.S. Court of Military Appeals, renamed as Court of Appeals for the Armed Forces
+5 	U.S. Court of Military Review
+6 	U.S. Court of Veterans Appeals
+7 	U.S. Customs Court
+8 	U.S. Court of Appeals, Federal Circuit
+9 	U.S. Tax Court
+10 	Temporary Emergency U.S. Court of Appeals
+12 	U.S. Court for China
+13 	U.S. Consular Courts
+14 	U.S. Commerce Court
+15 	Territorial Supreme Court
+16 	Territorial Appellate Court
+17 	Territorial Trial Court
+18 	Emergency Court of Appeals
+19 	Supreme Court of the District of Columbia
+20 	Bankruptcy Court
+21 	U.S. Court of Appeals, First Circuit
+22 	U.S. Court of Appeals, Second Circuit
+23 	U.S. Court of Appeals, Third Circuit
+24 	U.S. Court of Appeals, Fourth Circuit
+25 	U.S. Court of Appeals, Fifth Circuit
+26 	U.S. Court of Appeals, Sixth Circuit
+27 	U.S. Court of Appeals, Seventh Circuit
+28 	U.S. Court of Appeals, Eighth Circuit
+29 	U.S. Court of Appeals, Ninth Circuit
+30 	U.S. Court of Appeals, Tenth Circuit
+31 	U.S. Court of Appeals, Eleventh Circuit
+32 	U.S. Court of Appeals, District of Columbia Circuit (includes the Court of Appeals for the District of Columbia but not the District of Columbia Court of Appeals, which has local jurisdiction)
+41 	Alabama Middle U.S. District Court
+42 	Alabama Northern U.S. District Court
+43 	Alabama Southern U.S. District Court
+44 	Alaska U.S. District Court
+45 	Arizona U.S. District Court
+46 	Arkansas Eastern U.S. District Court
+47 	Arkansas Western U.S. District Court
+48 	California Central U.S. District Court
+49 	California Eastern U.S. District Court
+50 	California Northern U.S. District Court
+51 	California Southern U.S. District Court
+52 	Colorado U.S. District Court
+53 	Connecticut U.S. District Court
+54 	Delaware U.S. District Court
+55 	District Of Columbia U.S. District Court
+56 	Florida Middle U.S. District Court
+57 	Florida Northern U.S. District Court
+58 	Florida Southern U.S. District Court
+59 	Georgia Middle U.S. District Court
+60 	Georgia Northern U.S. District Court
+61 	Georgia Southern U.S. District Court
+62 	Guam U.S. District Court
+63 	Hawaii U.S. District Court
+64 	Idaho U.S. District Court
+65 	Illinois Central U.S. District Court
+66 	Illinois Northern U.S. District Court
+67 	Illinois Southern U.S. District Court
+68 	Indiana Northern U.S. District Court
+69 	Indiana Southern U.S. District Court
+70 	Iowa Northern U.S. District Court
+71 	Iowa Southern U.S. District Court
+72 	Kansas U.S. District Court
+73 	Kentucky Eastern U.S. District Court
+74 	Kentucky Western U.S. District Court
+75 	Louisiana Eastern U.S. District Court
+76 	Louisiana Middle U.S. District Court
+77 	Louisiana Western U.S. District Court
+78 	Maine U.S. District Court
+79 	Maryland U.S. District Court
+80 	Massachusetts U.S. District Court
+81 	Michigan Eastern U.S. District Court
+82 	Michigan Western U.S. District Court
+83 	Minnesota U.S. District Court
+84 	Mississippi Northern U.S. District Court
+85 	Mississippi Southern U.S. District Court
+86 	Missouri Eastern U.S. District Court
+87 	Missouri Western U.S. District Court
+88 	Montana U.S. District Court
+89 	Nebraska U.S. District Court
+90 	Nevada U.S. District Court
+91 	New Hampshire U.S. District Court
+92 	New Jersey U.S. District Court
+93 	New Mexico U.S. District Court
+94 	New York Eastern U.S. District Court
+95 	New York Northern U.S. District Court
+96 	New York Southern U.S. District Court
+97 	New York Western U.S. District Court
+98 	North Carolina Eastern U.S. District Court
+99 	North Carolina Middle U.S. District Court
+100 	North Carolina Western U.S. District Court
+101 	North Dakota U.S. District Court
+102 	Northern Mariana Islands U.S. District Court
+103 	Ohio Northern U.S. District Court
+104 	Ohio Southern U.S. District Court
+105 	Oklahoma Eastern U.S. District Court
+106 	Oklahoma Northern U.S. District Court
+107 	Oklahoma Western U.S. District Court
+108 	Oregon U.S. District Court
+109 	Pennsylvania Eastern U.S. District Court
+110 	Pennsylvania Middle U.S. District Court
+111 	Pennsylvania Western U.S. District Court
+112 	Puerto Rico U.S. District Court
+113 	Rhode Island U.S. District Court
+114 	South Carolina U.S. District Court
+115 	South Dakota U.S. District Court
+116 	Tennessee Eastern U.S. District Court
+117 	Tennessee Middle U.S. District Court
+118 	Tennessee Western U.S. District Court
+119 	Texas Eastern U.S. District Court
+120 	Texas Northern U.S. District Court
+121 	Texas Southern U.S. District Court
+122 	Texas Western U.S. District Court
+123 	Utah U.S. District Court
+124 	Vermont U.S. District Court
+125 	Virgin Islands U.S. District Court
+126 	Virginia Eastern U.S. District Court
+127 	Virginia Western U.S. District Court
+128 	Washington Eastern U.S. District Court
+129 	Washington Western U.S. District Court
+130 	West Virginia Northern U.S. District Court
+131 	West Virginia Southern U.S. District Court
+132 	Wisconsin Eastern U.S. District Court
+133 	Wisconsin Western U.S. District Court
+134 	Wyoming U.S. District Court
+150 	Louisiana U.S. District Court
+151 	Washington U.S. District Court
+152 	West Virginia U.S. District Court
+153 	Illinois Eastern U.S. District Court
+155 	South Carolina Eastern U.S. District Court
+160 	South Carolina Western U.S. District Court
+162 	Alabama U.S. District Court
+163 	U.S. District Court for the Canal Zone
+164 	Georgia U.S. District Court
+165 	Illinois U.S. District Court
+166 	Indiana U.S. District Court
+167 	Iowa U.S. District Court
+168 	Michigan U.S. District Court
+169 	Mississippi U.S. District Court
+170 	Missouri U.S. District Court
+171 	New Jersey Eastern U.S. District Court (East Jersey U.S. District Court)
+172 	New Jersey Western U.S. District Court (West Jersey U.S. District Court)
+173 	New York U.S. District Court
+174 	North Carolina U.S. District Court
+175 	Ohio U.S. District Court
+176 	Pennsylvania U.S. District Court
+177 	Tennessee U.S. District Court
+178 	Texas U.S. District Court
+179 	Virginia U.S. District Court
+180 	Norfolk U.S. District Court
+181 	Wisconsin U.S. District Court
+182 	Kentucky U.S. Distrcrict Court
+183 	New Jersey U.S. District Court
+184 	California U.S. District Court
+185 	Florida U.S. District Court
+186 	Arkansas U.S. District Court
+187 	District of Orleans U.S. District Court
+300 	State Supreme Court
+301 	State Appellate Court
+302 	State Trial Court
+400 	Eastern Circuit (of the United States)
+401 	Middle Circuit (of the United States)
+402 	Southern Circuit (of the United States)
+403 	Alabama U.S. Circuit Court for (all) District(s) of Alabama
+404 	Arkansas U.S. Circuit Court for (all) District(s) of Arkansas
+405 	California U.S. Circuit for (all) District(s) of California
+406 	Connecticut U.S. Circuit for the District of Connecticut
+407 	Delaware U.S. Circuit for the District of Delaware
+408 	Florida U.S. Circuit for (all) District(s) of Florida
+409 	Georgia U.S. Circuit for (all) District(s) of Georgia
+410 	Illinois U.S. Circuit for (all) District(s) of Illinois
+411 	Indiana U.S. Circuit for (all) District(s) of Indiana
+412 	Iowa U.S. Circuit for (all) District(s) of Iowa
+413 	Kansas U.S. Circuit for the District of Kansas
+414 	Kentucky U.S. Circuit for (all) District(s) of Kentucky
+415 	Louisiana U.S. Circuit for (all) District(s) of Louisiana
+416 	Maine U.S. Circuit for the District of Maine
+417 	Maryland U.S. Circuit for the District of Maryland
+418 	Massachusetts U.S. Circuit for the District of Massachusetts
+419 	Michigan U.S. Circuit for (all) District(s) of Michigan
+420 	Minnesota U.S. Circuit for the District of Minnesota
+421 	Mississippi U.S. Circuit for (all) District(s) of Mississippi
+422 	Missouri U.S. Circuit for (all) District(s) of Missouri
+423 	Nevada U.S. Circuit for the District of Nevada
+424 	New Hampshire U.S. Circuit for the District of New Hampshire
+425 	New Jersey U.S. Circuit for (all) District(s) of New Jersey
+426 	New York U.S. Circuit for (all) District(s) of New York
+427 	North Carolina U.S. Circuit for (all) District(s) of North Carolina
+428 	Ohio U.S. Circuit for (all) District(s) of Ohio
+429 	Oregon U.S. Circuit for the District of Oregon
+430 	Pennsylvania U.S. Circuit for (all) District(s) of Pennsylvania
+431 	Rhode Island U.S. Circuit for the District of Rhode Island
+432 	South Carolina U.S. Circuit for the District of South Carolina
+433 	Tennessee U.S. Circuit for (all) District(s) of Tennessee
+434 	Texas U.S. Circuit for (all) District(s) of Texas
+435 	Vermont U.S. Circuit for the District of Vermont
+436 	Virginia U.S. Circuit for (all) District(s) of Virginia
+437 	West Virginia U.S. Circuit for (all) District(s) of West Virginia
+438 	Wisconsin U.S. Circuit for (all) District(s) of Wisconsin
+439 	Wyoming U.S. Circuit for the District of Wyoming
+440 	Circuit Court of the District of Columbia
+441 	Nebraska U.S. Circuit for the District of Nebraska
+442 	Colorado U.S. Circuit for the District of Colorado
+443 	Washington U.S. Circuit for (all) District(s) of Washington
+444 	Idaho U.S. Circuit Court for (all) District(s) of Idaho
+445 	Montana U.S. Circuit Court for (all) District(s) of Montana
+446 	Utah U.S. Circuit Court for (all) District(s) of Utah
+447 	South Dakota U.S. Circuit Court for (all) District(s) of South Dakota
+448 	North Dakota U.S. Circuit Court for (all) District(s) of North Dakota
+449 	Oklahoma U.S. Circuit Court for (all) District(s) of Oklahoma
+601 	Court of Private Land Claims
+nan     United States Supreme Court

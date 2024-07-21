@@ -1,0 +1,64 @@
+1 	Alabama
+2 	Alaska
+3 	American Samoa
+4 	Arizona
+5 	Arkansas
+6 	California
+7 	Colorado
+8 	Connecticut
+9 	Delaware
+10 	District of Columbia
+11 	Federated States of Micronesia
+12 	Florida
+13 	Georgia
+14 	Guam
+15 	Hawaii
+16 	Idaho
+17 	Illinois
+18 	Indiana
+19 	Iowa
+20 	Kansas
+21 	Kentucky
+22 	Louisiana
+23 	Maine
+24 	Marshall Islands
+25 	Maryland
+26 	Massachusetts
+27 	Michigan
+28 	Minnesota
+29 	Mississippi
+30 	Missouri
+31 	Montana
+32 	Nebraska
+33 	Nevada
+34 	New Hampshire
+35 	New Jersey
+36 	New Mexico
+37 	New York
+38 	North Carolina
+39 	North Dakota
+40 	Northern Mariana Islands
+41 	Ohio
+42 	Oklahoma
+43 	Oregon
+44 	Palau
+45 	Pennsylvania
+46 	Puerto Rico
+47 	Rhode Island
+48 	South Carolina
+49 	South Dakota
+50 	Tennessee
+51 	Texas
+52 	Utah
+53 	Vermont
+54 	Virgin Islands
+55 	Virginia
+56 	Washington
+57 	West Virginia
+58 	Wisconsin
+59 	Wyoming
+60 	United States
+61 	Interstate Compact
+62 	Philippines
+63 	Indian
+64 	Dakota

@@ -1,0 +1,311 @@
+1 	attorney general of the United States, or his office
+2 	specified state board or department of education
+3 	city, town, township, village, or borough government or governmental unit
+4 	state commission, board, committee, or authority
+5 	county government or county governmental unit, except school district
+6 	court or judicial district
+7 	state department or agency
+8 	governmental employee or job applicant
+9 	female governmental employee or job applicant
+10 	minority governmental employee or job applicant
+11 	minority female governmental employee or job applicant
+12 	not listed among agencies in the first Administrative Action variable
+13 	retired or former governmental employee
+14 	U.S. House of Representatives
+15 	interstate compact
+16 	judge
+17 	state legislature, house, or committee
+18 	local governmental unit other than a county, city, town, township, village, or borough
+19 	governmental official, or an official of an agency established under an interstate compact
+20 	state or U.S. supreme court
+21 	local school district or board of education
+22 	U.S. Senate
+23 	U.S. senator
+24 	foreign nation or instrumentality
+25 	state or local governmental taxpayer, or executor of the estate of
+26 	state college or university
+27 	United States
+28 	State
+100 	person accused, indicted, or suspected of crime
+101 	advertising business or agency
+102 	agent, fiduciary, trustee, or executor
+103 	airplane manufacturer, or manufacturer of parts of airplanes
+104 	airline
+105 	distributor, importer, or exporter of alcoholic beverages
+106 	alien, person subject to a denaturalization proceeding, or one whose citizenship is revoked
+107 	American Medical Association
+108 	National Railroad Passenger Corp.
+109 	amusement establishment, or recreational facility
+110 	arrested person, or pretrial detainee
+111 	attorney, or person acting as such;includes bar applicant or law student, or law firm or bar association
+112 	author, copyright holder
+113 	bank, savings and loan, credit union, investment company
+114 	bankrupt person or business, or business in reorganization
+115 	establishment serving liquor by the glass, or package liquor store
+116 	water transportation, stevedore
+117 	bookstore, newsstand, printer, bindery, purveyor or distributor of books or magazines
+118 	brewery, distillery
+119 	broker, stock exchange, investment or securities firm
+120 	construction industry
+121 	bus or motorized passenger transportation vehicle
+122 	business, corporation
+123 	buyer, purchaser
+124 	cable TV
+125 	car dealer
+126 	person convicted of crime
+127 	tangible property, other than real estate, including contraband
+128 	chemical company
+129 	child, children, including adopted or illegitimate
+130 	religious organization, institution, or person
+131 	private club or facility
+132 	coal company or coal mine operator
+133 	computer business or manufacturer, hardware or software
+134 	consumer, consumer organization
+135 	creditor, including institution appearing as such; e.g., a finance company
+136 	person allegedly criminally insane or mentally incompetent to stand trial
+137 	defendant
+138 	debtor
+139 	real estate developer
+140 	disabled person or disability benefit claimant
+141 	distributor
+142 	person subject to selective service, including conscientious objector
+143 	drug manufacturer
+144 	druggist, pharmacist, pharmacy
+145 	employee, or job applicant, including beneficiaries of
+146 	employer-employee trust agreement, employee health and welfare fund, or multi-employer pension plan
+147 	electric equipment manufacturer
+148 	electric or hydroelectric power utility, power cooperative, or gas and electric company
+149 	eleemosynary institution or person
+150 	environmental organization
+151 	employer. If employer's relations with employees are governed by the nature of the employer's business (e.g., railroad, boat), rather than labor law generally, the more specific designation is used in place of Employer.
+152 	farmer, farm worker, or farm organization
+153 	father
+154 	female employee or job applicant
+155 	female
+156 	movie, play, pictorial representation, theatrical production, actor, or exhibitor or distributor of
+157 	fisherman or fishing company
+158 	food, meat packing, or processing company, stockyard
+159 	foreign (non-American) nongovernmental entity
+160 	franchiser
+161 	franchisee
+162 	lesbian, gay, bisexual, transexual person or organization
+163 	person who guarantees another's obligations
+164 	handicapped individual, or organization of devoted to
+165 	health organization or person, nursing home, medical clinic or laboratory, chiropractor
+166 	heir, or beneficiary, or person so claiming to be
+167 	hospital, medical center
+168 	husband, or ex-husband
+169 	involuntarily committed mental patient
+170 	Indian, including Indian tribe or nation
+171 	insurance company, or surety
+172 	inventor, patent assigner, trademark owner or holder
+173 	investor
+174 	injured person or legal entity, nonphysically and non-employment related
+175 	juvenile
+176 	government contractor
+177 	holder of a license or permit, or applicant therefor
+178 	magazine
+179 	male
+180 	medical or Medicaid claimant
+181 	medical supply or manufacturing co.
+182 	racial or ethnic minority employee or job applicant
+183 	minority female employee or job applicant
+184 	manufacturer
+185 	management, executive officer, or director, of business entity
+186 	military personnel, or dependent of, including reservist
+187 	mining company or miner, excluding coal, oil, or pipeline company
+188 	mother
+189 	auto manufacturer
+190 	newspaper, newsletter, journal of opinion, news service
+191 	radio and television network, except cable tv
+192 	nonprofit organization or business
+193 	nonresident
+194 	nuclear power plant or facility
+195 	owner, landlord, or claimant to ownership, fee interest, or possession of land as well as chattels
+196 	shareholders to whom a tender offer is made
+197 	tender offer
+198 	oil company, or natural gas producer
+199 	elderly person, or organization dedicated to the elderly
+200 	out of state noncriminal defendant
+201 	political action committee
+202 	parent or parents
+203 	parking lot or service
+204 	patient of a health professional
+205 	telephone, telecommunications, or telegraph company
+206 	physician, MD or DO, dentist, or medical society
+207 	public interest organization
+208 	physically injured person, including wrongful death, who is not an employee
+209 	pipe line company
+210 	package, luggage, container
+211 	political candidate, activist, committee, party, party member, organization, or elected official
+212 	indigent, needy, welfare recipient
+213 	indigent defendant
+214 	private person
+215 	prisoner, inmate of penal institution
+216 	professional organization, business, or person
+217 	probationer, or parolee
+218 	protester, demonstrator, picketer or pamphleteer (non-employment related), or non-indigent loiterer
+219 	public utility
+220 	publisher, publishing company
+221 	radio station
+222 	racial or ethnic minority
+223 	person or organization protesting racial or ethnic segregation or discrimination
+224 	racial or ethnic minority student or applicant for admission to an educational institution
+225 	realtor
+226 	journalist, columnist, member of the news media
+227 	resident
+228 	restaurant, food vendor
+229 	retarded person, or mental incompetent
+230 	retired or former employee
+231 	railroad
+232 	private school, college, or university
+233 	seller or vendor
+234 	shipper, including importer and exporter
+235 	shopping center, mall
+236 	spouse, or former spouse
+237 	stockholder, shareholder, or bondholder
+238 	retail business or outlet
+239 	student, or applicant for admission to an educational institution
+240 	taxpayer or executor of taxpayer's estate, federal only
+241 	tenant or lessee
+242 	theater, studio
+243 	forest products, lumber, or logging company
+244 	person traveling or wishing to travel abroad, or overseas travel agent
+245 	trucking company, or motor carrier
+246 	television station
+247 	union member
+248 	unemployed person or unemployment compensation applicant or claimant
+249 	union, labor organization, or official of
+250 	veteran
+251 	voter, prospective voter, elector, or a nonelective official seeking reapportionment or redistricting of legislative districts (POL)
+252 	wholesale trade
+253 	wife, or ex-wife
+254 	witness, or person under subpoena
+255 	network
+256 	slave
+257 	slave-owner
+258 	bank of the united states
+259 	timber company
+260 	u.s. job applicants or employees
+301 	Army and Air Force Exchange Service
+302 	Atomic Energy Commission
+303 	Secretary or administrative unit or personnel of the U.S. Air Force
+304 	Department or Secretary of Agriculture
+305 	Alien Property Custodian
+306 	Secretary or administrative unit or personnel of the U.S. Army
+307 	Board of Immigration Appeals
+308 	Bureau of Indian Affairs
+310 	Bonneville Power Administration
+311 	Benefits Review Board
+312 	Civil Aeronautics Board
+313 	Bureau of the Census
+314 	Central Intelligence Agency
+315 	Commodity Futures Trading Commission
+316 	Department or Secretary of Commerce
+317 	Comptroller of Currency
+318 	Consumer Product Safety Commission
+319 	Civil Rights Commission
+320 	Civil Service Commission, U.S.
+321 	Customs Service or Commissioner of Customs
+322 	Defense Base Closure and REalignment Commission
+323 	Drug Enforcement Agency
+324 	Department or Secretary of Defense (and Department or Secretary of War)
+325 	Department or Secretary of Energy
+326 	Department or Secretary of the Interior
+327 	Department of Justice or Attorney General
+328 	Department or Secretary of State
+329 	Department or Secretary of Transportation
+330 	Department or Secretary of Education
+331 	U.S. Employees' Compensation Commission, or Commissioner
+332 	Equal Employment Opportunity Commission
+333 	Environmental Protection Agency or Administrator
+334 	Federal Aviation Agency or Administration
+335 	Federal Bureau of Investigation or Director
+336 	Federal Bureau of Prisons
+337 	Farm Credit Administration
+338 	Federal Communications Commission (including a predecessor, Federal Radio Commission)
+339 	Federal Credit Union Administration
+340 	Food and Drug Administration
+341 	Federal Deposit Insurance Corporation
+342 	Federal Energy Administration
+343 	Federal Election Commission
+344 	Federal Energy Regulatory Commission
+345 	Federal Housing Administration
+346 	Federal Home Loan Bank Board
+347 	Federal Labor Relations Authority
+348 	Federal Maritime Board
+349 	Federal Maritime Commission
+350 	Farmers Home Administration
+351 	Federal Parole Board
+352 	Federal Power Commission
+353 	Federal Railroad Administration
+354 	Federal Reserve Board of Governors
+355 	Federal Reserve System
+356 	Federal Savings and Loan Insurance Corporation
+357 	Federal Trade Commission
+358 	Federal Works Administration, or Administrator
+359 	General Accounting Office
+360 	Comptroller General
+361 	General Services Administration
+362 	Department or Secretary of Health, Education and Welfare
+363 	Department or Secretary of Health and Human Services
+364 	Department or Secretary of Housing and Urban Development
+366 	Interstate Commerce Commission
+367 	Indian Claims Commission
+368 	Immigration and Naturalization Service, or Director of, or District Director of, or Immigration and Naturalization Enforcement
+369 	Internal Revenue Service, Collector, Commissioner, or District Director of
+370 	Information Security Oversight Office
+371 	Department or Secretary of Labor
+372 	Loyalty Review Board
+373 	Legal Services Corporation
+374 	Merit Systems Protection Board
+375 	Multistate Tax Commission
+376 	National Aeronautics and Space Administration
+377 	Secretary or administrative unit of the U.S. Navy
+378 	National Credit Union Administration
+379 	National Endowment for the Arts
+380 	National Enforcement Commission
+381 	National Highway Traffic Safety Administration
+382 	National Labor Relations Board, or regional office or officer
+383 	National Mediation Board
+384 	National Railroad Adjustment Board
+385 	Nuclear Regulatory Commission
+386 	National Security Agency
+387 	Office of Economic Opportunity
+388 	Office of Management and Budget
+389 	Office of Price Administration, or Price Administrator
+390 	Office of Personnel Management
+391 	Occupational Safety and Health Administration
+392 	Occupational Safety and Health Review Commission
+393 	Office of Workers' Compensation Programs
+394 	Patent Office, or Commissioner of, or Board of Appeals of
+395 	Pay Board (established under the Economic Stabilization Act of 1970)
+396 	Pension Benefit Guaranty Corporation
+397 	U.S. Public Health Service
+398 	Postal Rate Commission
+399 	Provider Reimbursement Review Board
+400 	Renegotiation Board
+401 	Railroad Adjustment Board
+402 	Railroad Retirement Board
+403 	Subversive Activities Control Board
+404 	Small Business Administration
+405 	Securities and Exchange Commission
+406 	Social Security Administration or Commissioner
+407 	Selective Service System
+408 	Department or Secretary of the Treasury
+409 	Tennessee Valley Authority
+410 	United States Forest Service
+411 	United States Parole Commission
+412 	Postal Service and Post Office, or Postmaster General, or Postmaster
+413 	United States Sentencing Commission
+414 	Veterans' Administration
+415 	War Production Board
+416 	Wage Stabilization Board
+417 	General Land Office of Commissioners
+418 	Transportation Security Administration
+419 	Surface Transportation Board
+420 	U.S. Shipping Board Emergency Fleet Corp.
+421 	Reconstruction Finance Corp.
+422 	Department or Secretary of Homeland Security
+501 	Unidentifiable
+600 	International Entity
