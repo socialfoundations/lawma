@@ -7,8 +7,8 @@ This is the primary code base for the project:
 [Lawma 8B](https://huggingface.co/ricdomolm/lawma-8b) and [Lawma 70B](https://huggingface.co/ricdomolm/lawma-70b) are language models fine-tuned on 260 legal classification tasks derived from the [Supreme Court](http://scdb.wustl.edu/data.php) and [Songer Court of Appeals](www.songerproject.org/us-courts-of-appeals-databases.html) databases. The Lawma models outperform GPT-4 on 95\% of these legal classification tasks, on average by over 17 accuracy points.
 
 * **The models**: [Lawma 8B](https://huggingface.co/ricdomolm/lawma-8b) and [Lawma 70B](https://huggingface.co/ricdomolm/lawma-70b) are fine-tunes of Llama 3 Instruct.
-* **The fine-tuning dataset**: our [fine-tuning dataset](https://huggingface.co/datasets/ricdomolm/lawma-all-tasks) contains a diverse set of 260 legal classification tasks, with around 500k task examples and 2 billion tokens. See [Appendix B](https://arxiv.org/abs/2407.16615) for the full list of tasks.
-* **The legal classification tasks**: they comprise almost all of the variables of the [Supreme Court](http://scdb.wustl.edu/data.php) and [Songer Court of Appeals](www.songerproject.org/us-courts-of-appeals-databases.html) databases.
+* **The fine-tuning dataset**: our [fine-tuning dataset](https://huggingface.co/datasets/ricdomolm/lawma-all-tasks) contains a diverse set of 260 legal classification tasks, with around 500k task examples and 2 billion tokens.
+* **The legal classification tasks**: they comprise almost all of the variables of the [Supreme Court](http://scdb.wustl.edu/data.php) and [Songer Court of Appeals](www.songerproject.org/us-courts-of-appeals-databases.html) databases, see [Appendix B](https://arxiv.org/abs/2407.16615).
 * **The details**: see our [arXiv preprint](https://arxiv.org/abs/2407.16615) for more details, including a number of fine-tuning experiments on the
 scaling behaviour of fine-tuning, its sample efficiency, its generalization to unseen tasks and Courts, and the effect of single task specialization.
 
