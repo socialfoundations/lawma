@@ -12,7 +12,7 @@ This is the primary code base for the project:
 * **The details**: see our [arXiv preprint](https://arxiv.org/abs/2407.16615) for more details, including a number of fine-tuning experiments on the
 scaling behaviour of fine-tuning, its sample efficiency, its generalization to unseen tasks and Courts, and the effect of single task specialization.
 
-**What are the Lawma models useful for?** We recommend using the Lawma models only for legal classification tasks that are very similar to those in the Supreme Court and Court of Appeals databases. The main take-away of our paper is that fine-tuning on specific tasks of interest leads to large improvements in performance. Therefore, we strongly recommend to further fine-tune on the tasks that you whish to use the model for. Relatively few examples --i.e, dozens or hundreds-- may already lead to large gains in performance. Since Lawma was fine-tuned on a diverse set of legal classification tasks, fine-tuning Lawma on your tasks of interest may yield better resuts compared to fine-tuning more general instruction-tuned models.
+**What are the Lawma models useful for?** We recommend using the Lawma models only for the legal classification tasks that they models were fine-tuned on. The main take-away of our paper is that specializing models leads to large improvements in performance. Therefore, we strongly recommend practitioners to further fine-tune Lawma on the actual tasks that the models will be used for. Relatively few examples --i.e, dozens or hundreds-- may already lead to large gains in performance.
 
 **Why these legal classification tasks?** Our reasons to study legal classification tasks are both technical and substantive. From a technical machine learning perspective, these tasks provide highly non-trivial classification problems where even the best models leave much room for improvement. From a substantive legal perspective, efficient solutions to such classification problems have rich and important applications in legal research. We provide code to evaluate the performance of HF models on these classification tasks.
 
@@ -33,7 +33,7 @@ To evaluate language models on each of the 260 legal tasks, please refer to the 
 | Saul 7B Inst | 34.4 | 20.2 | 36.8 |
 | LegalBert | 24.6 | 13.6 | 26.4 |
 
-The Lawma models substantially outperform all other models tested, and in particular GPT-4. Note that, while Lawma 70B generally outperforms Lawma 8B, the difference in performance is typically rather small. Therefore, practitioners may prefer to use Lawma 8B for its singificantly cheaper inference and fine-tuning, with little cost in terms of model performance.
+The Lawma models substantially outperform all other models tested, and in particular GPT-4. Note that, while Lawma 70B generally outperforms Lawma 8B, the difference in performance is typically rather small. Therefore, practitioners may prefer to use Lawma 8B for its significantly cheaper inference and fine-tuning, with little cost in terms of model performance.
 
 Note: evaluating models on all 260 classification tasks is reasonably compute intensive. However, for the purposes of language model benchmarking we may be mostly interested in aggregate performance. We are currently working on making aggregate evaluations less resource intensive by only considering a limited number of examples per task.
 
@@ -55,7 +55,7 @@ and then train using axolotl as usual
 accelerate launch -m axolotl.cli.train config.yml
 ```
 
-Fine-tuning Lawma 8B on 7xH100 GPUs required a total of 600 H100 hours (3 epochs), whereas fine-tuning Lawma 70B on 8 H100 nodes of 8 GPUs each required around 1600 H100 hours (1 epoch). We find that further expochs hurt average task performance.
+Fine-tuning Lawma 8B on 7xH100 GPUs required a total of 600 H100 hours (3 epochs), whereas fine-tuning Lawma 70B on 8 H100 nodes of 8 GPUs each required around 1600 H100 hours (1 epoch). We find that further epochs hurt average task performance.
 
 ## Reproducing the experiments and figures of the paper
 
