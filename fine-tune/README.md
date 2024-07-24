@@ -17,9 +17,9 @@ NCCL_SOCKET_IFNAME=enp52s0np0 accelerate launch --config_file 8nodes_zero3.yaml 
 ### Additional fine-tuning experiments
 
 For our experiments, we use use an internal cluster with `htcondor`. You can see the specific job files in the `jobs/` folder, in particular:
-    * `jobs_scaling.py` for the scaling experiments in Section 3.1
-    * `jobs_eff.py` for the sample effiency experiments in Section 3.2
-    * `jobs_specialized.py` for the specialization experiments in Section 3.3
+* `jobs_scaling.py` for the scaling experiments in Section 3.1
+* `jobs_eff.py` for the sample effiency experiments in Section 3.2
+* `jobs_specialized.py` for the specialization experiments in Section 3.3
 
 Note: These job files may not directly run in your compute environment. However, the files may still be useful as a starting point. Moreover, they contain all details necessary to reproduce the results, such as hyperparameters and other design choices.
 

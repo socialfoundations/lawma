@@ -1,4 +1,4 @@
-# Lawma: The power of specialization for legal tasks.
+# Lawma: The power of specialization for legal tasks
 
 This is the primary code base for the project:
 
