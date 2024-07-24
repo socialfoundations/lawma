@@ -2,11 +2,7 @@
 
 This is the primary code base for the project:
 
-*Lawma: The Power of Specizalization for Legal Tasks*
-
-*Ricardo Dominguez-Olmedo and Vedant Nanda and Rediet Abebe and Stefan Bechtold and Christoph Engel and Jens Frankenreiter and Krishna Gummadi and Moritz Hardt and Michael Livermore*
-
-*2024*
+*Lawma: The Power of Specizalization for Legal Tasks. Ricardo Dominguez-Olmedo and Vedant Nanda and Rediet Abebe and Stefan Bechtold and Christoph Engel and Jens Frankenreiter and Krishna Gummadi and Moritz Hardt and Michael Livermore. 2024*
 
 To reproduce the results of the paper, take the following steps:
 
