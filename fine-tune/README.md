@@ -1,6 +1,8 @@
 # Fine-tuning experiments
 
-To train the Lawma models, first follow the steps in the `data_generation` folder in order to generate the fine-tuning dataset, which we assume will be stored in `../instructions/tok_llama-3-8k_8192/`. Then, to train Lawma 8B on a single node with 7 GPUs, we use
+To train the Lawma models, first follow the steps in the `data_generation` folder in order to generate the fine-tuning dataset, which we assume will be stored in `../instructions/tok_llama-3-8k_8192/`. Then, install the library requirements using `install_requirements.sh`. 
+
+To train Lawma 8B on a single node with 7 GPUs, we use
 
 ```bash
 accelerate launch --config_file 7gpu_zero2.yaml ft.py lawma-8b.yml --output_dir ../models/lawma-8b
@@ -18,6 +20,8 @@ For our experiments, we use use an internal cluster with `htcondor`. You can see
     * `jobs_scaling.py` for the scaling experiments in Section 3.1
     * `jobs_eff.py` for the sample effiency experiments in Section 3.2
     * `jobs_specialized.py` for the specialization experiments in Section 3.3
+
+Note: These job files may not directly run in your compute environment. However, the files may still be useful as a starting point. Moreover, they contain all details necessary to reproduce the results, such as hyperparameters and other design choices.
 
 For the generalization experiment in Section 3.4, we run
 
