@@ -31,10 +31,10 @@ Please refer to the README in the [fine-tune](fine-tune/) folder for the scripts
 ## Reproducing the experiments and figures of the paper
 
 To reproduce the results of the paper, take the following steps:
-    * Go to [data_generation](data_generation/) for all code to create the classification tasks and the fine-tuning dataset.
-    * The directory [evaluation](evaluation/) contains code used to evaluate various models on the classification tasks.
-    * The directory [fine-tune](fine-tune/) contains code to fine-tune Lawma, as well as the for the additional fine-tuning experiments included in the paper.
-    * The directory [notebooks](notebooks/) contains ipynb files to generate the plots and tables of the paper.
+* Go to [data_generation](data_generation/) for all code to create the classification tasks and the fine-tuning dataset.
+* The directory [evaluation](evaluation/) contains code used to evaluate various models on the classification tasks.
+* The directory [fine-tune](fine-tune/) contains code to fine-tune Lawma, as well as the for the additional fine-tuning experiments included in the paper.
+* The directory [notebooks](notebooks/) contains ipynb files to generate the plots and tables of the paper.
 
 See the README.md files in the subdirectories for additional documentation.
 
