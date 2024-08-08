@@ -1,13 +1,9 @@
-import sys
-sys.path.append('.')
-sys.path.append('../')
-
 import json
 import random
 from tqdm import tqdm
 
-from llm_utils import load_tokenizer_model, return_logprobs_choices, greedy_decode
-from llm_utils import get_conv_template, build_prompt_task
+from utils import load_tokenizer_model, return_logprobs_choices, greedy_decode
+from utils import get_conv_template, build_prompt_task
 
 
 def test_proper_labels(tokenizer, candidates):

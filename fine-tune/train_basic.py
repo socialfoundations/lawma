@@ -4,11 +4,6 @@
 Adapted from https://github.com/huggingface/transformers/blob/main/examples/pytorch/language-modeling/run_clm_no_trainer.py
 from the Accelerate example zoo https://huggingface.co/docs/accelerate/usage_guides/training_zoo
 """
-
-import sys
-sys.path.append('.')
-sys.path.append('../')
-
 import numpy as np
 import torch
 from accelerate.logging import get_logger

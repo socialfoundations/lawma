@@ -2,7 +2,7 @@
 import sys
 sys.path.append('.')
 sys.path.append('../')
-from eval.hf_eval import get_auto_evaluator, TaskEvaluator
+from evaluation.hf_eval import get_auto_evaluator, TaskEvaluator
 
 import random
 import json
