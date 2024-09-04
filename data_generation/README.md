@@ -1,7 +1,6 @@
-# Generating classification tasks from the Supreme Court and Songer databases
+# Generate classification tasks from the Supreme Court and Songer databases
 
 Here we provide the steps to generate the legal classification tasks considered in our work.
-We include these tasks in the `../tasks/` folder as `.jsonl` files.
 
 ## Download the court opinions of each court case in the SC/Songer databases
 
