@@ -118,7 +118,7 @@ def get_files_from_metadata(scdb_citations, caselaw_dir, verbose=False, skip={})
                     docket_number = docket_number.replace('–', '-')
                     docket_number = re.sub(r'[^\d -]', '', docket_number).strip()
 
-                    citations_dict[citation].append((docket_number, row['file_name'], row['id']))
+                    citations_dict[citation].append((docket_number, row['file_name']))
             
             if verbose:
                 print('Volume citations:', citations_dict.keys())
@@ -138,9 +138,9 @@ def get_files_from_metadata(scdb_citations, caselaw_dir, verbose=False, skip={})
             continue
         docket = docket.strip().replace('–', '-')
         docket = re.sub(r'[^\d -]', '', docket).strip()
-        for docket_number, file_name, caselaw_id in citations_dict[citation]:
+        for docket_number, file_name in citations_dict[citation]:
             if docket in docket_number:
-                matched_files[i] = (f"{caselaw_dir}{volume}/cases/{file_name}.json", caselaw_id)
+                matched_files[i] = (f"{caselaw_dir}{volume}/cases/{file_name}.json")
                 break
         
         # if no docket number matches, print the citation and the docket numbers
@@ -160,6 +160,8 @@ def download_in_parallel(matched_files):
             i = futures[future]
             files[i] = future.result()
 
+    # sort by the index
+    files = {k: v for k, v in sorted(files.items(), key=lambda item: item[0])}
     return files
 
 
@@ -231,6 +233,7 @@ if __name__ == "__main__":
                 songer[['citation', 'docket']],
                 caselaw_dir="https://static.case.law/f2d/",
         )
+        print(f"Matched {len(matched_files)/len(songer)*100:.1f}% of Songer cases ({len(matched_files)}/{len(songer)})")
 
         files = download_in_parallel(matched_files)
         joint_database = match_files_with_db(files, songer, 'songer')

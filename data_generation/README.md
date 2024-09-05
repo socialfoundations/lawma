@@ -6,7 +6,6 @@ First, download the court opinions of each court case in the SC/Songer databases
 
 ```bash
 pip install pyreadstat pandas tqdm
-mkdir caselaw/
 python download_data.py --sc --songer --save_dir caselaw/
 ```
 

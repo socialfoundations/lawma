@@ -323,8 +323,8 @@ tasks = (
             'Consider "diversity jurisdiction" if the majority said in approximately so many words that under its diversity jurisdiction it is interpreting state law. ' \
             'Consider \"federal common law\" if the majority indicate that it used a judge-made "doctrine" or "rule; ' \
             'if the Court without more merely specifies the disposition the Court has made of the case and cites one or more of its own previously decided cases ' \
-            'unless the citation is qualified by the word "see."; if the case concerns admiralty or maritime law, or some other aspect of the law of " \
-            nations other than a treaty; ' \
+            'unless the citation is qualified by the word "see."; if the case concerns admiralty or maritime law, or some other aspect of the law of ' \
+            'nations other than a treaty; ' \
             'if the case concerns the retroactive application of a constitutional provision or a previous decision of the Court; ' \
             'if the case concerns an exclusionary rule, the harmless error rule (though not the statute), the abstention doctrine, comity, res judicata, or collateral estoppel; ' \
             'or if the case concerns a "rule" or "doctrine" that is not specified as related to or connected with a constitutional or statutory provision. ' \
