@@ -1,3 +1,4 @@
+import os
 import json
 import random
 random.seed(42)
@@ -5,24 +6,18 @@ random.seed(42)
 
 def get_majority_opinion(case):
     maj_opinion = None
-    for opinion in case['caselaw']['casebody']['data']['opinions']:
+    for opinion in case['caselaw']['casebody']['opinions']:
         if opinion['type'] == 'majority':
-            assert maj_opinion is None, case['caselaw']['casebody']['data']['opinions']
+            assert maj_opinion is None, case['caselaw']['casebody']['opinions']
             maj_opinion = opinion['text']
     return maj_opinion
 
 # return cases with a valid majority opinion
 def get_cases_with_maj_opinion(dataset):
     for case_ in dataset:
-        assert case_['caselaw']['casebody']['status'] == 'ok'
-
         maj_opinion = get_majority_opinion(case_)
-        if maj_opinion is None:
+        if maj_opinion is None or len(maj_opinion) == 0:
             continue
-
-        if len(maj_opinion) == 0:
-            continue
-
         yield case_
 
 # Save the opinions corresponding to each id in the dataset
@@ -73,9 +68,6 @@ def subsample_majority_class(decisions, verbose=False):  # decisions -> decision
 def subsample_and_save_decisions(task, decisions, splits, save_dir=None,
                                 limit_train=True, limit_test=True, verbose=False):
 
-    limit_train = False
-    limit_test = False
-    
     if verbose and (not 'answer_choices' in task):
         print("No answer choices for the task", task['name'])
 
@@ -99,9 +91,12 @@ def subsample_and_save_decisions(task, decisions, splits, save_dir=None,
         ids.update(split_examples.keys())
         n += len(split_examples)
 
-        if split == 'test':
-            # save scaling factor
-            with open(f"/fast/rolmedo/scaling_factors/{task['name']}.json", 'w') as f:
+        if split == 'test' and save_dir is not None:
+            scaling_save_dir = f"{save_dir}/scaling_factors/"
+            if not os.path.exists(scaling_save_dir):
+                os.makedirs(scaling_save_dir)
+
+            with open(f"{scaling_save_dir}{task['name']}.json", 'w') as f:
                 json.dump(scaling, f)
 
     if verbose:

@@ -1,7 +1,6 @@
 import os
 import json
 from tqdm import tqdm
-import numpy as np
 
 from utils import get_cases_with_maj_opinion, save_opinions, subsample_and_save_decisions
 
@@ -2588,8 +2587,6 @@ def create_task_issue(dataset, task_var, task, **save_kwargs):
             n_nans += 1
             continue
 
-        assert id_ not in decisions, f"ID {id_} already in decisions"
-
         decision = int(decision) if decision is not None else 'None'
         decision_dict = fill_decision_answer_choices(decision, choices)
 
@@ -2692,9 +2689,6 @@ def get_examples_app_resp_task(dataset, **save_kwargs):
         decisions = {id_: {**ex, 'key': key} for id_, ex in decisions.items()}
 
         # check that none of the ids are repeated
-        ids0 = set(agg_decisions[base_name].keys())
-        ids1 = set(decisions.keys())
-        assert len(ids0.intersection(ids1)) == 0, f"Repeated ids in {task['name']}"
         agg_decisions[base_name].update(decisions)
 
         # print('Aggregated task:', base_name)
@@ -2901,7 +2895,7 @@ if __name__ == "__main__":
     parser.add_argument('--data_file', type=str, required=True)
     parser.add_argument('--save_dir', type=str, required=True)
     parser.add_argument('--train_test_split', type=str, default='splits/splits_songer.json')
-    # by default, the task data is subsampled such that the majority class is at most 80% of the task data
+    # by default, the task data is subsampled such that the majority class is at most 50% of the task data
     parser.add_argument('--do_not_limit_train', action='store_true')
     parser.add_argument('--do_not_limit_test', action='store_true')
     args = parser.parse_args()

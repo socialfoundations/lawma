@@ -536,7 +536,7 @@ if __name__ == "__main__":
     parser.add_argument('--data_file', type=str, required=True)
     parser.add_argument('--save_dir', type=str, required=True)
     parser.add_argument('--train_test_split', type=str, default='splits/splits_scdb.json')
-    # by default, the task data is subsampled such that the majority class is at most 80% of the task data
+    # by default, the task data is subsampled such that the majority class is at most 50% of the task data
     parser.add_argument('--do_not_limit_train', action='store_true')
     parser.add_argument('--do_not_limit_test', action='store_true')
 
