@@ -1,4 +1,5 @@
-# Create the train-test splits for the SCDB/Songer tasks
+# Script to create a train-test splits for SCDB/Songer tasks
+# Please use the canonical split provided in the `splits/` directory
 
 import json
 from tqdm import tqdm
