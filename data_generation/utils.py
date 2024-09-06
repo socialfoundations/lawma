@@ -35,16 +35,14 @@ def save_opinions(dataset, ids, save_dir, prefix=''):
 def subsample_majority_class(decisions, verbose=False):  # decisions -> decisions
     # compute the majority class
     counts = {}
+    process_target = lambda x: str(x) if type(x) == list else x
     for ex in decisions.values():
-        target = ex['target']
-        # only a few are multilabel, safe to ignore
-        if type(target) == list:
-            continue
+        target = process_target(ex['target'])
         if target not in counts:
             counts[target] = 0
         counts[target] += 1
     maj_class = max(counts, key=counts.get)
-    ids_majority = [id_ for id_, ex in decisions.items() if ex['target'] == maj_class]
+    ids_majority = [id_ for id_, ex in decisions.items() if process_target(ex['target']) == maj_class]
 
     # Now we subsample the majortiy class
     n_majority = len(ids_majority)

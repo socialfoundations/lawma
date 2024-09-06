@@ -1,8 +1,14 @@
 # Generate the legal classification tasks from the Supreme Court and Songer databases
 
-Here we provide the steps to generate the legal classification tasks considered in our work.
+You can download the task files directly by using
 
-First, download the court opinions of each court case in the SC/Songer databases:
+```bash
+wget -qO- https://huggingface.co/datasets/ricdomolm/lawma-task-files/resolve/main/tasks.tar.gz | tar -xz -C ../
+```
+
+The tasks will be saved in `../tasks/`.
+
+Alternatively, you can generate the task files yourself by following these steps. First, download the court opinions of each court case in the SC/Songer databases:
 
 ```bash
 pip install pyreadstat pandas tqdm
