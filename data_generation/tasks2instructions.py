@@ -91,6 +91,10 @@ if __name__ == "__main__":
     
     args = parser.parse_args()
 
+    # create the save dir if it doesn't exist
+    if args.save_dir is not None and not os.path.exists(args.save_dir):
+        os.makedirs(args.save_dir)
+
     random.seed(args.seed)
 
     if args.tokenizer_name is None:
