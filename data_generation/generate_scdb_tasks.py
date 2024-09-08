@@ -525,6 +525,8 @@ def post_process_task(task, decisions, answer_choices, **kwargs):
             if decisions[id_]['target'] == 'otherwise':
                 decisions[id_]['target'] = otherwise_code
 
+    # replace the answer choices of the task
+    task['answer_choices'] = answer_choices
     return subsample_and_save_decisions(task, decisions, **kwargs)
 
 
