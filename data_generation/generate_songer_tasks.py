@@ -1821,7 +1821,7 @@ issue_pre_tasks = {
             'that judge is not counted in the number of majority votes.',
         'question': 'What is the number of judges who voted in favor of the disposition favored by the majority?',
         'answer_choices': {
-            0: '0', 1: '1', 2: '2', 3: '3', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '9', 10: '10', 11: '11', 12: '12', 13: '13', 14: '14', 15: '15', 'None': 'Not ascertained',
+            0: '0', 1: '1', 2: '2', 3: '3', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '9', 10: '10', 11: '11', 12: '12', 13: '13', 14: '14', 15: '15',
         },
     },
     'dissent': {
@@ -1831,7 +1831,7 @@ issue_pre_tasks = {
             'Judges who dissented in part and concurred in part are counted as dissenting. ',
         'question': 'What is the number of judges who dissented from the majority?',
         'answer_choices': {
-            0: '0', 1: '1', 2: '2', 3: '3', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '9', 10: '10', 11: '11', 12: '12', 13: '13', 14: '14', 15: '15', 'None': 'Not ascertained',
+            0: '0', 1: '1', 2: '2', 3: '3', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '9', 10: '10', 11: '11', 12: '12', 13: '13', 14: '14', 15: '15',
         },
     },
     'concur': {
@@ -1840,7 +1840,7 @@ issue_pre_tasks = {
             'Your task is to determine the number of judges who either wrote a concurring opinion, joined a concurring opinion, or who indicated that they concurred in the result but not in the opinion of the court.',
         'question': 'What is the number of judges who concurred in the result but not in the opinion of the court?',
         'answer_choices': {
-            0: '0', 1: '1', 2: '2', 3: '3', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '9', 10: '10', 11: '11', 12: '12', 13: '13', 14: '14', 15: '15', 'None': 'Not ascertained',
+            0: '0', 1: '1', 2: '2', 3: '3', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '9', 10: '10', 11: '11', 12: '12', 13: '13', 14: '14', 15: '15',
         },
     },
     'habeas': {
@@ -2886,7 +2886,7 @@ def get_examples_issues(dataset, **save_kwargs):
             n_examples[task['name']] = n_examples_
     
     return seen_ids, n_examples
-                
+
 
 if __name__ == "__main__":
     import argparse
