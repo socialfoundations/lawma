@@ -1,20 +1,32 @@
-# Lawma: The power of specialization for legal tasks
+# Lawma: the power of specialization for legal tasks
 
-This is the primary code base for the project:
+[Lawma 8B](https://huggingface.co/ricdomolm/lawma-8b) and [Lawma 70B](https://huggingface.co/ricdomolm/lawma-70b) are language models fine-tuned on 260 legal classification tasks derived from the Supreme Court and Songer Court of Appeals legal databases. The Lawma models substantially outperform GPT-4 on 95\% of these legal classification tasks, on average by over 17 accuracy points.
 
-*Lawma: The Power of Specizalization for Legal Tasks. Ricardo Dominguez-Olmedo and Vedant Nanda and Rediet Abebe and Stefan Bechtold and Christoph Engel and Jens Frankenreiter and Krishna Gummadi and Moritz Hardt and Michael Livermore. 2024*
+* **The fine-tuning dataset**: our [fine-tuning dataset](https://huggingface.co/datasets/ricdomolm/lawma-all-tasks) contains a diverse set of 260 legal classification tasks, with around 500k task examples and 2 billion tokens. We fine-tune the Llama 3 Instruct models.
+* **The legal classification tasks**: they comprise almost all of the variables of the [Supreme Court](http://scdb.wustl.edu/data.php) and [Songer Court of Appeals](www.songerproject.org/us-courts-of-appeals-databases.html) databases.
+* **The details**: see our [arXiv preprint](https://arxiv.org/abs/2407.16615) for more details and a number of experiments on the scaling behaviour of fine-tuning, its sample efficiency, its generalization to unseen tasks and Courts, and the merits of single task specialization.
 
-[Lawma 8B](https://huggingface.co/ricdomolm/lawma-8b) and [Lawma 70B](https://huggingface.co/ricdomolm/lawma-70b) are language models fine-tuned on 260 legal classification tasks derived from the [Supreme Court](http://scdb.wustl.edu/data.php) and [Songer Court of Appeals](www.songerproject.org/us-courts-of-appeals-databases.html) databases. The Lawma models outperform GPT-4 on 95\% of these legal classification tasks, on average by over 17 accuracy points.
-
-* **The models**: [Lawma 8B](https://huggingface.co/ricdomolm/lawma-8b) and [Lawma 70B](https://huggingface.co/ricdomolm/lawma-70b) are fine-tunes of Llama 3 Instruct.
-* **The fine-tuning dataset**: our [fine-tuning dataset](https://huggingface.co/datasets/ricdomolm/lawma-all-tasks) contains a diverse set of 260 legal classification tasks, with around 500k task examples and 2 billion tokens.
-* **The legal classification tasks**: they comprise almost all of the variables of the [Supreme Court](http://scdb.wustl.edu/data.php) and [Songer Court of Appeals](www.songerproject.org/us-courts-of-appeals-databases.html) databases, see [Appendix B](https://arxiv.org/abs/2407.16615).
-* **The details**: see our [arXiv preprint](https://arxiv.org/abs/2407.16615) for more details, including a number of fine-tuning experiments on the
-scaling behaviour of fine-tuning, its sample efficiency, its generalization to unseen tasks and Courts, and the effect of single task specialization.
-
-**What are the Lawma models useful for?** We recommend using the Lawma models only for the legal classification tasks that they models were fine-tuned on. The main take-away of our paper is that specializing models leads to large improvements in performance. Therefore, we strongly recommend practitioners to further fine-tune Lawma on the actual tasks that the models will be used for. Relatively few examples --i.e, dozens or hundreds-- may already lead to large gains in performance.
+**What are the Lawma models useful for?** We recommend using the Lawma models only for the legal classification tasks that they models were fine-tuned on.
+The model has been fine-tuned on multiple-choice questions, not on general instructions. Therefore, the model only outputs multiple choice letters (e.g., A, B, C, etc) or numbers. 
+The main take-away of our paper is that specializing models leads to large improvements in performance. Therefore, we strongly recommend practitioners to further fine-tune Lawma on the actual tasks that the models will be used for. Relatively few examples --i.e, dozens or hundreds-- may already lead to large gains in performance.
 
 **Why these legal classification tasks?** Our reasons to study legal classification tasks are both technical and substantive. From a technical machine learning perspective, these tasks provide highly non-trivial classification problems where even the best models leave much room for improvement. From a substantive legal perspective, efficient solutions to such classification problems have rich and important applications in legal research. We provide code to evaluate the performance of HF models on these classification tasks.
+
+## The legal classification tasks
+
+Our reasons to study legal classification tasks are both technical and substantive. From a technical machine learning perspective, these tasks provide highly non-trivial classification problems where even the best models leave much room for improvement. From a substantive legal perspective, efficient solutions to such classification problems have rich and important applications in legal research.
+
+You can find these legal classification tasks in [`ricdomolm/lawma-tasks`](https://huggingface.co/datasets/ricdomolm/lawma-tasks). For example, the following retrieves the train split of the `sc_issuearea` task:
+
+```python
+import pandas
+import datasets
+
+task_data = datasets.load_dataset('ricdomolm/lawma-tasks', 'sc_issuearea')
+task_data = pandas.DataFrame(task_data['train'])
+```
+
+The datasets contain the following fields: `opinion` (the Court's opinion), the task's `instruction` and `question` (derived from the SC and Songer documnetation), `choices` (the possible answer chocies, if applicable), and `answer` (indexes of choices if choices if non-empty).
 
 ## Evaluation
 
@@ -55,12 +67,11 @@ and then train using axolotl as usual
 accelerate launch -m axolotl.cli.train config.yml
 ```
 
-Fine-tuning Lawma 8B on 7xH100 GPUs required a total of 600 H100 hours (3 epochs), whereas fine-tuning Lawma 70B on 8 H100 nodes of 8 GPUs each required around 1600 H100 hours (1 epoch). We find that further epochs hurt average task performance.
+Fine-tuning Lawma 8B on 7xH100 GPUs required a total of 600 H100 hours (3 epochs), whereas fine-tuning Lawma 70B on 8 H100 nodes of 8 GPUs each required around 1600 H100 hours (1 epoch).
 
 ## Reproducing the experiments and figures of the paper
 
-To reproduce the results of the paper, take the following steps:
-* Go to [data_generation](data_generation/) for all code to create the classification tasks and the fine-tuning dataset.
+* The directory [data_generation](data_generation/) contains code used to create the legal classification tasks and the fine-tuning dataset.
 * The directory [evaluation](evaluation/) contains code used to evaluate various models on the classification tasks.
 * The directory [fine-tune](fine-tune/) contains code to fine-tune Lawma, as well as the for the additional fine-tuning experiments included in the paper.
 * The directory [notebooks](notebooks/) contains ipynb files to generate the plots and tables of the paper.
