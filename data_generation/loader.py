@@ -91,11 +91,13 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--save_dir', type=str, default='../datasets/')
     parser.add_argument('--task_dir', type=str, default='../tasks/')
+    parser.add_argument('--save_parquet', action='store_true')
     parser.add_argument('--push_to_hub', action='store_true')
     
     args = parser.parse_args()
     task_dir = args.task_dir
     save_dir = args.save_dir
+    save_parquet = args.push_to_hub or args.save_parquet
 
     print('Loading opinions...')
     files = sorted(os.listdir(task_dir))
@@ -111,6 +113,8 @@ if __name__ == "__main__":
     for task in task_files:
         task_name = task[:-5]
         os.makedirs(f"{save_dir}{task_name}", exist_ok=True)
+
+        dsets = {}
         for split in ['train', 'val', 'test']:
             loader = TaskLoader(
                 task_file=f"{task_dir}{task}",
@@ -119,8 +123,14 @@ if __name__ == "__main__":
             )
 
             dset = datasets.Dataset.from_list(list(loader))
-            save_name = f"{save_dir}{task_name}/{split}-00000-of-00001.parquet"
-            dset.to_parquet(save_name)
+            if save_parquet:
+                save_name = f"{save_dir}{task_name}/{split}-00000-of-00001.parquet"
+                dset.to_parquet(save_name)
+            else:
+                dsets[split] = dset
+        
+        if not save_parquet:
+            datasets.DatasetDict(dsets).save_to_disk(f"{save_dir}{task_name}")
 
     if args.push_to_hub:  # you need to be authenticated to push to the hub
         import git

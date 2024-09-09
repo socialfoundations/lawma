@@ -23,6 +23,7 @@ wget -qO- https://huggingface.co/datasets/ricdomolm/lawma-task-files/resolve/mai
 The tasks will be saved in `../tasks/`. Then, convert them to parquet datasets 
 
 ```bash
+pip install datasets
 python loader.py --task_dir ../tasks/ --save_dir ../datasets/
 ```
 

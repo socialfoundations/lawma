@@ -24,7 +24,7 @@ task_data = datasets.load_dataset('ricdomolm/lawma-tasks', 'sc_issuearea', split
 task_data = pandas.DataFrame(task_data)
 ```
 
-The datasets contain the following fields: `opinion` (the Court's opinion), the task's `instruction` and `question` (derived from the SC and Songer documnetation), `choices` (the possible answer chocies, if applicable), and `answer` (indexes of choices if choices if non-empty).
+The datasets contain the following fields: `opinion` (the Court's opinion), the task's `instruction` and `question` (derived from the SC and Songer documentation), `choices` (the possible answer chocies, if applicable), and `answer` (indexes of choices if choices if non-empty).
 
 ## Evaluation
 

@@ -1,5 +1,8 @@
+import string
+import numpy as np
+import torch
+import transformers
 import tiktoken
-from fastchat.conversation import get_conv_template as fastchat_get_conv_template
 
 def get_conv_template(conv_template=None, tokenizer=None):
         # Define the conversational template
@@ -45,6 +48,7 @@ def get_conv_template(conv_template=None, tokenizer=None):
                                                     tokenize=False)
     
     else:
+        from fastchat.conversation import get_conv_template as fastchat_get_conv_template
         def apply_conv_template(texts):
             conv = fastchat_get_conv_template(conv_template)
             for q, a in format(texts):
@@ -86,7 +90,6 @@ def build_prompt_task(top, bot, input_text, tokenizer, apply_conv_template, cont
     kwargs = {} if type(tokenizer) == tiktoken.core.Encoding else {'add_special_tokens': False}    
 
     # No amount of opinion fits
-    print("Remaining tokens: ", remaining_tokens)
     if remaining_tokens < 0:
         input_text = top + bot
         tokenized_body = tokenizer.encode(input_text, **kwargs)
@@ -107,13 +110,6 @@ def build_prompt_task(top, bot, input_text, tokenizer, apply_conv_template, cont
     input_text = top + input_text + bot
 
     return input_text, text_fits
-
-
-import string
-import numpy as np
-import torch
-import transformers
-
 
 def exact_match(text, choices):
     # remove punctuation from text and choices
@@ -142,7 +138,7 @@ def greedy_decode(model, tokenizer, prompt, max_gen=50, delete_eos=False):
 
     # Generate and obtain the output tokens
     with torch.no_grad():
-        output = model.generate(input_ids=inputs_ids.cuda(),
+        output = model.generate(input_ids=inputs_ids.to(model.device),
                                 do_sample=False,
                                 max_new_tokens=max_gen)
 
@@ -164,7 +160,7 @@ def query_model_batch(text_inputs, tokenizer, model, context_size):
     # Pad
     tensor_inputs = torch.nn.utils.rnn.pad_sequence(token_inputs,
                                                     batch_first=True,
-                                                    padding_value=tokenizer.pad_token_id).cuda()
+                                                    padding_value=tokenizer.pad_token_id).to(model.device)
     attention_mask = tensor_inputs.ne(tokenizer.pad_token_id)
 
     # Query the model
@@ -283,7 +279,6 @@ def add_pad_token(tokenizer, model):
 def load_tokenizer_model(model_name, **kwargs):
     tokenizer = transformers.AutoTokenizer.from_pretrained(model_name, cache_dir="/tmp")
 
-    # torch_dtype = torch.bfloat16 if torch.cuda.get_device_capability(0)[0] >= 8 else torch.float16
     if 'bert' in model_name.lower():
         model = transformers.AutoModelForMaskedLM.from_pretrained(model_name,
                                                                  cache_dir='/tmp',
@@ -292,7 +287,6 @@ def load_tokenizer_model(model_name, **kwargs):
     else:
         model = transformers.AutoModelForCausalLM.from_pretrained(model_name,
                                                                 device_map='auto',
-                                                                #   torch_dtype=torch_dtype,
                                                                 cache_dir='/tmp',
                                                                 trust_remote_code=True,
                                                                 **kwargs)
