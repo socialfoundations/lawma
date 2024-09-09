@@ -10,8 +10,6 @@
 The model has been fine-tuned on multiple-choice questions, not on general instructions. Therefore, the model only outputs multiple choice letters (e.g., A, B, C, etc) or numbers. 
 The main take-away of our paper is that specializing models leads to large improvements in performance. Therefore, we strongly recommend practitioners to further fine-tune Lawma on the actual tasks that the models will be used for. Relatively few examples --i.e, dozens or hundreds-- may already lead to large gains in performance.
 
-**Why these legal classification tasks?** Our reasons to study legal classification tasks are both technical and substantive. From a technical machine learning perspective, these tasks provide highly non-trivial classification problems where even the best models leave much room for improvement. From a substantive legal perspective, efficient solutions to such classification problems have rich and important applications in legal research. We provide code to evaluate the performance of HF models on these classification tasks.
-
 ## The legal classification tasks
 
 Our reasons to study legal classification tasks are both technical and substantive. From a technical machine learning perspective, these tasks provide highly non-trivial classification problems where even the best models leave much room for improvement. From a substantive legal perspective, efficient solutions to such classification problems have rich and important applications in legal research.
