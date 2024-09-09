@@ -20,8 +20,8 @@ You can find these legal classification tasks in [`ricdomolm/lawma-tasks`](https
 import pandas
 import datasets
 
-task_data = datasets.load_dataset('ricdomolm/lawma-tasks', 'sc_issuearea')
-task_data = pandas.DataFrame(task_data['train'])
+task_data = datasets.load_dataset('ricdomolm/lawma-tasks', 'sc_issuearea', split='train')
+task_data = pandas.DataFrame(task_data)
 ```
 
 The datasets contain the following fields: `opinion` (the Court's opinion), the task's `instruction` and `question` (derived from the SC and Songer documnetation), `choices` (the possible answer chocies, if applicable), and `answer` (indexes of choices if choices if non-empty).

@@ -6,8 +6,8 @@ You can retrieve the legal classification tasks from [`ricdomolm/lawma-tasks`](h
 import pandas
 import datasets
 
-task_data = datasets.load_dataset('ricdomolm/lawma-tasks', 'sc_issuearea')
-task_data = pandas.DataFrame(task_data['train'])
+task_data = datasets.load_dataset('ricdomolm/lawma-tasks', 'sc_issuearea', split='train')
+task_data = pandas.DataFrame(task_data)
 ```
 
 The output task files can be used to benchmark LLMs (see the evaluation folder). They can also be formatted and tokenized for supervised fine-tuning (see the fine-tune folder).

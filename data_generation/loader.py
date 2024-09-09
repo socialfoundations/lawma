@@ -38,7 +38,7 @@ class TaskLoader:
 
         for example in self.examples:
             choices = self.get_choices(example)
-            choices_list = list(choices.keys()) if choices else []
+            choices_list = list(choices.values()) if choices else []
 
             answer = example['target']
             if type(answer) != list:
@@ -85,7 +85,6 @@ class TaskLoader:
 
 if __name__ == "__main__":
     import os 
-    import git
     import datasets
     import argparse
 
@@ -116,7 +115,7 @@ if __name__ == "__main__":
             loader = TaskLoader(
                 task_file=f"{task_dir}{task}",
                 opinions=opinions,
-                split='test',
+                split=split,
             )
 
             dset = datasets.Dataset.from_list(list(loader))
@@ -124,6 +123,7 @@ if __name__ == "__main__":
             dset.to_parquet(save_name)
 
     if args.push_to_hub:  # you need to be authenticated to push to the hub
+        import git
         print('Cloning the repository...')
         repo = git.Repo.clone_from("https://huggingface.co/datasets/ricdomolm/lawma-tasks", 'lawma-tasks') 
         print('Copying files...')
