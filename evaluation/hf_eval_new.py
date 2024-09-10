@@ -7,10 +7,12 @@ import datasets
 from utils import load_tokenizer_model, return_logprobs_choices, greedy_decode
 
 
-def get_choice_labels(choices):
+def get_choice_labels(choices, default_choices=None):
     n_choices = len(choices)
     if n_choices < 26: # A, B, C, ...
         return [chr(65 + i) for i in range(n_choices)]
+    elif default_choices is not None:
+        return default_choices[:n_choices]
     n_digits = len(str(n_choices))
     return [str(i+1).zfill(n_digits) for i in range(n_choices)]
 
@@ -19,18 +21,18 @@ def choices_to_text(choices, choice_labels):
     return '\n'.join([f"{label.strip()}. {text.strip()}" for label, text in zip(choice_labels, choices)])
 
 
-def get_choices_text_answer(choices, answer):
+def get_choices_text_answer(choices, answer, default_choices=None):
     if len(choices) == 0:
         return '', [' ' + str(a).strip() for a in answer], None
-    choice_labels = get_choice_labels(choices)
+    choice_labels = get_choice_labels(choices, default_choices=default_choices)
     choices_text = choices_to_text(choices, choice_labels)
     choice_labels = [' ' + label for label in choice_labels]
     target = [choice_labels[i] for i in answer]
     return choices_text, target, choice_labels
 
 
-def get_question_target(choices, answer, question):
-    choices_text, target, choice_labels = get_choices_text_answer(choices, answer)
+def get_question_target(choices, answer, question, default_choices=None):
+    choices_text, target, choice_labels = get_choices_text_answer(choices, answer, default_choices=default_choices)
     question = f"Question: {question.strip()}\n{choices_text}\nAnswer:"
     return question, target, choice_labels
 
@@ -71,10 +73,18 @@ def shorten_opinion_batch(top, bot, input_text, tokenizer, context_size, headroo
 
 
 class Evaluator:
-    def __init__(self, task, tokenizer=None, context_size=None, max_samples=None, encode_batch_size=1000, verbose=False):
+    def __init__(self, task, tokenizer=None, context_size=None, max_samples=None, use_cn_labels=True, encode_batch_size=1000, verbose=False):
         """
         Takes in an iterator over 'opinion', 'instruction', 'question', 'choices', 'answer' and
         returns an iterator over 'prompt', 'ground_truth'
+
+        Args:
+            task: an iterator over 'opinion', 'instruction', 'question', 'choices', 'answer'
+            tokenizer: a tokenizer object
+            context_size: the maximum number of tokens that the model can process
+            max_samples: the maximum number of samples to process
+            use_cn_labels: whether to use Chinese characters (single token) for choice labels, otherwise 001, 002, ...
+            encode_batch_size: the batch size for tokenization
         """
         self.verbose = verbose
 
@@ -86,10 +96,14 @@ class Evaluator:
             task = task.shuffle(seed=0)
             task = task.select(range(min(max_samples, len(task))))
 
+        default_choices=None
+        # if use_cn_labels:
+
+
         if verbose: print('Constructing the question-target pairs...')
         def map_get_question_target(example):
             prompt_question, ground_truth, choice_labels = get_question_target(
-                example['choices'], example['answer'], example['question']
+                example['choices'], example['answer'], example['question'], default_choices=default_choices,
             )
             return {
                 'prompt_question': prompt_question, 
@@ -137,20 +151,21 @@ class TaskEvaluator:
         results = []
         for example in self.evaluator:
             prompt = example['prompt']
-            target = example['ground_truth']
             choices = example['choice_labels']
 
-            if choices is not None and self.mc:
-                _, response = return_logprobs_choices(prompt, choices, tokenizer, model, self.context_size)
-                response = {float(value) for value in response.values()}
-            else:
-                response = greedy_decode(model, tokenizer, prompt, max_gen=10)
-
             result = {
-                'ground_truth': target,
-                'model_response': response,
+                'ground_truth': example['ground_truth'],
                 'prompt_len': len(tokenizer.encode(prompt)),
             }
+
+            if choices is not None and self.mc:
+                response, logits = return_logprobs_choices(prompt, choices, tokenizer, model, self.context_size)
+                result['logits'] = [float(value) for value in logits.values()]
+            else:
+                # todo: seems to not cut the response properly (: included in the response)
+                response = greedy_decode(model, tokenizer, prompt, max_gen=5)
+
+            result['model_response'] = response
 
             results.append(result)
 
@@ -191,7 +206,6 @@ class TaskEvaluator:
                     search = re.search(r'\d+', yp)
                     yp_ = int(search.group()) if search is not None else None
                 elif yt_.isupper():  # find the first capital letter
-                    yt_ = yt_.strip()
                     search = re.search(r'[A-Z]', yp)
                     yp_ = search.group() if search is not None else None
                 else:
