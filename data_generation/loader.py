@@ -86,6 +86,7 @@ class TaskLoader:
 if __name__ == "__main__":
     import os 
     import datasets
+    from datasets import Features, Sequence, Value
     import argparse
 
     parser = argparse.ArgumentParser()
@@ -107,6 +108,14 @@ if __name__ == "__main__":
         with open(f"{task_dir}/{opinion_file}", 'r') as f:
             opinions.update(json.load(f))
 
+    feature_types = Features({
+        'opinion': Value('string'),
+        'instruction': Value('string'),
+        'question': Value('string'),
+        'choices': Sequence(Value('string')),
+        'answer': Sequence(Value('int64'))
+    })
+
     print('Saving datasets...')
     task_files = [f for f in files if f.endswith('.json') and f not in opinion_files]
     os.makedirs(save_dir, exist_ok=True)
@@ -122,7 +131,7 @@ if __name__ == "__main__":
                 split=split,
             )
 
-            dset = datasets.Dataset.from_list(list(loader))
+            dset = datasets.Dataset.from_list(list(loader)).cast(feature_types)
             if save_parquet:
                 save_name = f"{save_dir}{task_name}/{split}-00000-of-00001.parquet"
                 dset.to_parquet(save_name)
