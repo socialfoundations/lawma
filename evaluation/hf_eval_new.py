@@ -180,7 +180,7 @@ class TaskEvaluator:
 
         outcomes = []
         for yp, yt in zip(y_pred, y_true):
-            print(yp, yt)
+            any_match = False
             for yt_ in yt:
                 yt_ = yt_.strip()
                 if yt_.isdigit():  # find the first integer 
@@ -193,8 +193,10 @@ class TaskEvaluator:
                     yp_ = yp.strip()
                 
                 if yt_ == yp_:
-                    outcomes.append(1)
-                    break                    
+                    any_match = True
+                    break
+
+            outcomes.append(any_match)
         
         return np.mean(outcomes)
 
@@ -223,14 +225,14 @@ if __name__ == "__main__":
     if args.task_dir is None:
         task_dataset = datasets.load_dataset('ricdomolm/lawma-tasks', args.task, split=args.eval_split)
     else:
-        task_dataset = datasets.load_from_disk(f"{args.task_dir}/{args.task}", split=args.eval_split)
+        task_dataset = datasets.load_from_disk(f"{args.task_dir}/{args.task}")[args.eval_split]
 
     # Load the model
     print('Loading model...', args.model_dir)
     tokenizer, model = load_tokenizer_model(
         args.model_dir,
-        # attn_implementation="flash_attention_2",
-        # torch_dtype=torch.bfloat16,
+        attn_implementation="flash_attention_2",
+        torch_dtype=torch.bfloat16,
     )
 
     print('Creating the evaluator...')

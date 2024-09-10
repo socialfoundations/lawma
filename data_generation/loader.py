@@ -102,6 +102,7 @@ if __name__ == "__main__":
 
     print('Loading opinions...')
     files = sorted(os.listdir(task_dir))
+    files = [f for f in files if not f.startswith('.')]
     opinion_files = [f for f in files if f.endswith('opinions.json')]
     opinions = {}
     for opinion_file in opinion_files:
