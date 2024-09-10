@@ -1,7 +1,6 @@
 import re
 import json
 import numpy as np
-from tqdm import tqdm
 
 import datasets
 
@@ -72,7 +71,7 @@ def shorten_opinion_batch(top, bot, input_text, tokenizer, context_size, headroo
 
 
 class Evaluator:
-    def __init__(self, task, tokenizer=None, context_size=None, encode_batch_size=1000, verbose=False):
+    def __init__(self, task, tokenizer=None, context_size=None, max_samples=None, encode_batch_size=1000, verbose=False):
         """
         Takes in an iterator over 'opinion', 'instruction', 'question', 'choices', 'answer' and
         returns an iterator over 'prompt', 'ground_truth'
@@ -82,6 +81,10 @@ class Evaluator:
         if type(task) != datasets.Dataset:
             if verbose: print("Converting task to a dataset...")
             task = datasets.Dataset.from_list(list(task))
+
+        if max_samples is not None:
+            task = task.shuffle(seed=0)
+            task = task.select(range(min(max_samples, len(task))))
 
         if verbose: print('Constructing the question-target pairs...')
         def map_get_question_target(example):
@@ -185,10 +188,12 @@ class TaskEvaluator:
                 yt_ = yt_.strip()
                 if yt_.isdigit():  # find the first integer 
                     yt_ = int(yt_)
-                    yp_ = int(re.search(r'\d+', yp).group())
+                    search = re.search(r'\d+', yp)
+                    yp_ = int(search.group()) if search is not None else None
                 elif yt_.isupper():  # find the first capital letter
                     yt_ = yt_.strip()
-                    yp_ = re.search(r'[A-Z]', yp).group()
+                    search = re.search(r'[A-Z]', yp)
+                    yp_ = search.group() if search is not None else None
                 else:
                     yp_ = yp.strip()
                 
@@ -210,7 +215,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--model_dir', type=str, required=True)
     parser.add_argument('--task', type=str, required=True)
-    parser.add_argument('--task_dir', type=str, default=None)  # None for HF Hub
+    parser.add_argument('--task_dir', type=str, default=None)  # None for HF hub
     parser.add_argument('--save_dir', type=str, default=None)
 
     parser.add_argument('--eval_split', type=str, default='test')
@@ -240,6 +245,7 @@ if __name__ == "__main__":
         task=task_dataset,
         tokenizer=tokenizer,
         context_size=args.context_size,
+        max_samples=args.max_samples,
     )
     task_evaluator = TaskEvaluator(
         evaluator=evaluator,
@@ -253,6 +259,7 @@ if __name__ == "__main__":
     _, results = task_evaluator.evaluate_dataset(model, tokenizer)
 
     # save results as a json file
+    os.makedirs(args.save_dir, exist_ok=True)
     if args.save_dir is not None:
         file_name = f'{args.save_dir}/{args.task}.json'
         print(f'Saving results to {file_name}...')
