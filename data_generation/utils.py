@@ -10,6 +10,13 @@ def get_majority_opinion(case):
         if opinion['type'] == 'majority':
             assert maj_opinion is None, case['caselaw']['casebody']['opinions']
             maj_opinion = opinion['text']
+
+    # add the head matter if it exists
+    if maj_opinion is not None:
+        if 'head_matter' in case['caselaw']['casebody']:
+            head_matter = case['caselaw']['casebody']['head_matter']
+            maj_opinion = head_matter + '\n' + maj_opinion
+
     return maj_opinion
 
 # return cases with a valid majority opinion
