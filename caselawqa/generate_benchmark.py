@@ -27,9 +27,15 @@ if __name__ == "__main__":
 
     # Load all tasks as a dictionary
     task_dict = {}
-    tasks = sorted(os.listdir(task_dir))
-    for task in tasks:
-        task_dict[task] = datasets.load_from_disk(task_dir + task)['test']
+    if os.path.exists(task_dir):
+        tasks = sorted(os.listdir(task_dir))
+        for task in tasks:
+            task_dict[task] = datasets.load_from_disk(task_dir + task)['test']
+    else:  # load from HF hub
+        print(f"Loading tasks from HF hub ({task_dir} does not exist)")
+        tasks = datasets.get_dataset_config_names('ricdomolm/lawma-tasks')
+        for task in tasks:
+            task_dict[task] = datasets.load_dataset('ricdomolm/lawma-tasks', task, split='test')
 
     # Examples from Supreme Court and Songer Court of Appeals
     print("Loading SC and Songer tasks")
