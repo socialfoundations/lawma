@@ -1820,9 +1820,10 @@ issue_pre_tasks = {
             'If there is an indication that a judge heard argument in the case but did not participate in the final opinion (e.g., the judge died before the decision was reached), ' \
             'that judge is not counted in the number of majority votes.',
         'question': 'What is the number of judges who voted in favor of the disposition favored by the majority?',
-        'answer_choices': {
-            0: '0', 1: '1', 2: '2', 3: '3', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '9', 10: '10', 11: '11', 12: '12', 13: '13', 14: '14', 15: '15',
-        },
+        # 'answer_choices': {
+        #     0: '0', 1: '1', 2: '2', 3: '3', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '9', 10: '10', 11: '11', 12: '12', 13: '13', 14: '14', 15: '15',
+        # },
+        'type': 'int',
     },
     'dissent': {
         'name': 'songer_dissent',
@@ -1830,18 +1831,20 @@ issue_pre_tasks = {
             'Your task is to determine the number of judges who dissented from the majority (either with or without opinion). ' \
             'Judges who dissented in part and concurred in part are counted as dissenting. ',
         'question': 'What is the number of judges who dissented from the majority?',
-        'answer_choices': {
-            0: '0', 1: '1', 2: '2', 3: '3', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '9', 10: '10', 11: '11', 12: '12', 13: '13', 14: '14', 15: '15',
-        },
+        # 'answer_choices': {
+        #     0: '0', 1: '1', 2: '2', 3: '3', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '9', 10: '10', 11: '11', 12: '12', 13: '13', 14: '14', 15: '15',
+        # },
+        'type': 'int',
     },
     'concur': {
         'name': 'songer_concur',
         'instruction': f'{header}\n' \
             'Your task is to determine the number of judges who either wrote a concurring opinion, joined a concurring opinion, or who indicated that they concurred in the result but not in the opinion of the court.',
         'question': 'What is the number of judges who concurred in the result but not in the opinion of the court?',
-        'answer_choices': {
-            0: '0', 1: '1', 2: '2', 3: '3', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '9', 10: '10', 11: '11', 12: '12', 13: '13', 14: '14', 15: '15',
-        },
+        # 'answer_choices': {
+        #     0: '0', 1: '1', 2: '2', 3: '3', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '9', 10: '10', 11: '11', 12: '12', 13: '13', 14: '14', 15: '15',
+        # },
+        'type': 'int',
     },
     'habeas': {
         'name': 'songer_habeas',

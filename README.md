@@ -14,7 +14,7 @@ The main take-away of our paper is that specializing models leads to large impro
 
 Our reasons to study legal classification tasks are both technical and substantive. From a technical machine learning perspective, these tasks provide highly non-trivial classification problems where even the best models leave much room for improvement. From a substantive legal perspective, efficient solutions to such classification problems have rich and important applications in legal research.
 
-You can find these legal classification tasks in [`ricdomolm/lawma-tasks`](https://huggingface.co/datasets/ricdomolm/lawma-tasks). For example, the following retrieves the train split of the `sc_issuearea` task:
+You can find these legal classification tasks in [`ricdomolm/lawma-tasks`](https://huggingface.co/datasets/ricdomolm/lawma-tasks). For example, the following retrieves the train split of the `sc_issuearea` task as a `pandas.DataFrame`:
 
 ```python
 import pandas
@@ -25,6 +25,12 @@ task_data = pandas.DataFrame(task_data)
 ```
 
 The datasets contain the following fields: `opinion` (the Court's opinion), the task's `instruction` and `question` (derived from the SC and Songer documentation), `choices` (the possible answer chocies, if applicable), and `answer` (indexes of choices if choices if non-empty).
+
+To obtain the list of all classification tasks, use:
+
+```python
+datasets.get_dataset_config_names('ricdomolm/lawma-tasks')
+```
 
 ## Evaluation
 
