@@ -20,11 +20,21 @@ You can download the `.jsonl` task files by using
 wget -qO- https://huggingface.co/datasets/ricdomolm/lawma-task-files/resolve/main/tasks.tar.gz | tar -xz -C ../
 ```
 
-The tasks will be saved in `../tasks/`. Then, convert them to parquet datasets 
+The tasks will be saved in `../tasks/`. Then, convert them to HF datasets 
 
 ```bash
 pip install datasets
 python loader.py --task_dir ../tasks/ --save_dir ../datasets/
+```
+
+We upload the datasets to the HF hub as follows
+
+```bash
+python loader.py --task_dir ../tasks/ --save_dir ../datasets-parquet/ --save_parquet
+git clone https://huggingface.co/datasets/ricdomolm/lawma-tasks
+cp -r ../datasets-parquet/* lawma-tasks/
+cd lawma-tasks/; git add .; git commit -m "update"; git push
+cd ..; rm -rf lawma-tasks ../datasets-parquet/
 ```
 
 ### Generating the task .jsonl files
@@ -44,6 +54,7 @@ python generate_songer_tasks.py --data_file ../caselaw/caselaw_songer.jsonl --sa
 ```
 
 We upload the task `.jsonl` files to the HF hub as follows
+
 ```bash
 cp -r ../tasks ./
 python upload_task_files_to_hub.py
