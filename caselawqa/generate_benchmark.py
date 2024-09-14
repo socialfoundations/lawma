@@ -7,13 +7,6 @@ sys.path.append('../evaluation/')
 from hf_eval_new import Evaluator
 
 
-def read_task_txt(filename):
-    tasks = []
-    with open(filename) as f:
-        for line in f:
-            tasks.append(line.strip())
-    return tasks
-
 if __name__ == "__main__":
     import argparse
 
@@ -22,6 +15,7 @@ if __name__ == "__main__":
     parser.add_argument("--tokenizer", type=str, default="meta-llama/Meta-Llama-3-8B-Instruct")
     parser.add_argument("--max_n_tokens", type=int, default=8000)
     parser.add_argument("--save_name", type=str, default="-8k")
+    parser.add_argument("--push", action="store_true")
     
     args = parser.parse_args()
     task_dir = args.task_dir
@@ -51,54 +45,9 @@ if __name__ == "__main__":
     sc_examples = sc_examples.shuffle(seed=0).select(range(5000))
     songer_examples = songer_examples.shuffle(seed=0).select(range(5000))
 
-    # Tiny tasks
-    print("Loading tiny tasks")
-    tiny_tasks = read_task_txt('tiny_tasks.txt')
-    tiny_tasks = [dset for task, dset in task_dict.items() if task in tiny_tasks]
-    tiny_examples = datasets.concatenate_datasets(tiny_tasks)
-
-    tiny_examples = tiny_examples.filter(filter_func)
-    tiny_examples = tiny_examples.shuffle(seed=0)
-
-    # Hard tasks
-    print("Loading hard tasks")
-    target_size = 5000  # number of examples
-    hard_tasks = read_task_txt('hard_tasks.txt')
-
-    hard_tasks = [dset for task, dset in task_dict.items() if task in hard_tasks]
-    hard_tasks = [task.filter(filter_func) for task in hard_tasks]
-    hard_tasks = sorted(hard_tasks, key=lambda x: len(x))
-
-    # Prefer examples from tasks with fewer examples
-    total_examples = 0
-    hard_examples = []
-    for i in range(len(tasks)):
-        if total_examples > target_size:
-            break
-
-        n = len(hard_tasks[i])
-        if n == 0:
-            continue
-        
-        for j in range(i, len(hard_tasks)):
-            task = hard_tasks[j].shuffle(seed=0)
-
-            pop_indices = range(n)
-            keep_indices = range(n, len(task))
-            
-            hard_examples.append(task.select(pop_indices))
-            hard_tasks[j] = task.select(list(keep_indices))
-
-            total_examples += n
-
-    hard_examples = datasets.concatenate_datasets(hard_examples)
-    hard_examples = hard_examples.shuffle(seed=0).select(range(target_size))
-
     benchmark_datasets = datasets.DatasetDict({
         'sc': sc_examples,
         'songer': songer_examples,
-        'tiny': tiny_examples,
-        'hard': hard_examples,
     })
     columns = sc_examples.column_names
 
@@ -118,8 +67,15 @@ if __name__ == "__main__":
         short_dataset = short_dataset.remove_columns([col for col in short_dataset.column_names if col not in columns])
         shortened_datasets[name] = short_dataset
 
-    # Push to HF hub
-    print("Pushing to HF hub")
     for name, dataset in shortened_datasets.items():
         dataset_dict = datasets.DatasetDict({"test": dataset})
-        dataset_dict.push_to_hub(f'ricdomolm/caselawqa{args.save_name}', config_name=name)
+        if args.push:  # push to HF hub
+            dataset_dict.push_to_hub(f'ricdomolm/caselawqa{args.save_name}', config_name=name)
+        else:  # save to disk
+            dataset_dict.save_to_disk(f"caselawqa{args.save_name}_{name}")
+    
+    # print the first example of each dataset
+    for name, dataset in shortened_datasets.items():
+        print(name)
+        print(dataset[0])
+        print()
