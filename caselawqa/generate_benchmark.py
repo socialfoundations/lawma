@@ -26,8 +26,10 @@ if __name__ == "__main__":
     args = parser.parse_args()
     task_dir = args.task_dir
 
-    # Only take opinions which have at least 2000 characters
+    # Only take opinions which have at least 2000 characters, and 1 answer
     min_chars_opinion = 2000
+    def filter_func(x):
+        return (len(x['opinion']) >= min_chars_opinion) and (len(x['answer']) == 1)
 
     # Load all tasks as a dictionary
     task_dict = {}
@@ -43,8 +45,8 @@ if __name__ == "__main__":
     sc_examples = datasets.concatenate_datasets(sc_tasks)
     songer_examples = datasets.concatenate_datasets(songer_tasks)
 
-    sc_examples = sc_examples.filter(lambda x: len(x['opinion']) >= min_chars_opinion)
-    songer_examples = songer_examples.filter(lambda x: len(x['opinion']) >= min_chars_opinion)
+    sc_examples = sc_examples.filter(filter_func)
+    songer_examples = songer_examples.filter(filter_func)
 
     sc_examples = sc_examples.shuffle(seed=0).select(range(5000))
     songer_examples = songer_examples.shuffle(seed=0).select(range(5000))
@@ -55,7 +57,7 @@ if __name__ == "__main__":
     tiny_tasks = [dset for task, dset in task_dict.items() if task in tiny_tasks]
     tiny_examples = datasets.concatenate_datasets(tiny_tasks)
 
-    tiny_examples = tiny_examples.filter(lambda x: len(x['opinion']) >= min_chars_opinion)
+    tiny_examples = tiny_examples.filter(filter_func)
     tiny_examples = tiny_examples.shuffle(seed=0)
 
     # Hard tasks
@@ -64,7 +66,7 @@ if __name__ == "__main__":
     hard_tasks = read_task_txt('hard_tasks.txt')
 
     hard_tasks = [dset for task, dset in task_dict.items() if task in hard_tasks]
-    hard_tasks = [task.filter(lambda x: len(x['opinion']) >= min_chars_opinion) for task in hard_tasks]
+    hard_tasks = [task.filter(filter_func) for task in hard_tasks]
     hard_tasks = sorted(hard_tasks, key=lambda x: len(x))
 
     # Prefer examples from tasks with fewer examples
