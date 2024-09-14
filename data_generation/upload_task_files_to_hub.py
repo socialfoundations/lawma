@@ -6,7 +6,6 @@ if __name__ == '__main__':
     import argparse
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--token', type=str, required=True)
     parser.add_argument('--repo_id', type=str, default='ricdomolm/lawma-task-files')
     args = parser.parse_args()
 
@@ -22,7 +21,6 @@ if __name__ == '__main__':
     print("Uploading the compressed file to the hub...")
     api.upload_file(
         path_or_fileobj=filename,
-        token=args.token,
         path_in_repo=filename,
         repo_id=args.repo_id,
         repo_type="dataset",
