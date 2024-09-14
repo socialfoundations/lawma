@@ -43,7 +43,7 @@ python generate_scdb_tasks.py --data_file ../caselaw/caselaw_sc.jsonl --save_dir
 python generate_songer_tasks.py --data_file ../caselaw/caselaw_songer.jsonl --save_dir ../tasks/
 ```
 
-We upload to the HF hub as follows
+We upload the task `.jsonl` files to the HF hub as follows
 ```bash
 cp -r ../tasks ./
 python upload_task_files_to_hub.py
